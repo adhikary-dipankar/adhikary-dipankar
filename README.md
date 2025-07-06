@@ -97,9 +97,6 @@ Goals:
 ---
 
 > 💡 *“Code is not just syntax — it’s how you think. Build with vision.”*
-
----
-
-> *Made with ❤️ by Dipankar Adhikary*
+---------------------------------------------------------------------------------------------------------------------
 
 ```
