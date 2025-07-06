@@ -122,9 +122,7 @@ Goals:
 ---
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=2000&color=FACC15&width=750&lines=“Code+is+not+just+syntax+—+it’s+how+you+think.+Build+with+vision.”" alt="Animated Quote" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=2000&color=FACC15&width=800&lines=Code+is+not+just+syntax+--+it's+how+you+think.+Build+with+vision." alt="Animated Quote" />
 </h3>
-
-
 
 ```
