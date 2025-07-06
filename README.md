@@ -112,6 +112,7 @@ Goals:
 *  My fuel: Coffee + Music + Deep Focus
 
 ---
+
 ###  Connect with Me
 
 <p align="center">
@@ -119,10 +120,11 @@ Goals:
   <a href="https://www.linkedin.com/in/dipankaradhikary/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://github.com/adhikary-dipankar"><img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p> 
+
 ---
 
-<h5 align="center">
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=2000&color=FACC15&width=800&lines=Code+is+not+just+syntax+--+it's+how+you+think.+Build+with+vision." alt="Animated Quote" />
-</h5>
-
+</p>
+----
 ```
