@@ -46,19 +46,11 @@ Goals:
 
 ---
 
-<h3 align="center">GitHub Stats</h3>
-
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 10px;">
-  <div style="flex: 2; min-width: 300px;">
-    <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="130" />
-    <br/>
-    <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="130" />
-  </div>
-  <div style="flex: 1; min-width: 200px;">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical" height="270" />
-  </div>
-
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="160" />
+  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical" height="160"/>
+</p>
 
 ---
 
@@ -112,7 +104,7 @@ Goals:
 *  Write technical blogs for the dev community
 
 ---
-### ✨ Fun Facts
+###  Fun Facts
 
 *  I use a pencil to solve real-world problems
 *  I build like Iron Man, debug like Sherlock, and deploy like Flash
@@ -129,9 +121,10 @@ Goals:
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=2000&color=FDD835&center=true&vCenter=true&width=800&lines=Code+is+not+just+syntax+—+it’s+how+you+think.+Build+with+vision." alt="Quote Typing Animation" />
-</p>
+<h3 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=2000&color=FACC15&width=750&lines=“Code+is+not+just+syntax+—+it’s+how+you+think.+Build+with+vision.”" alt="Animated Quote" />
+</h3>
+
 
 
 ```
