@@ -9,7 +9,7 @@
 
 ---
 
-<h2 align="center">👨‍💻 About Me</h2>
+<h2 align="center"> About Me</h2>
 
 ```yaml
 Name: Dipankar Adhikary
@@ -30,23 +30,23 @@ Goals:
 
 ---
 
-### 🛠️ Tech Stack
+### 🛠 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,ts,js,html,css,mysql,mongodb,azure" height="45" />
+  <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,ts,js,html,css,mysql,mongodb,azure" height="25" />
 </p>
 
 ---
 
-### 🔧 Tools & Platforms
+###  Tools & Platforms
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=vscode,postman,git,github,figma,linux,visualstudio" height="45" />
+  <img src="https://skillicons.dev/icons?i=vscode,postman,git,github,figma,linux,visualstudio" height="25" />
 </p>
 
 ---
 
-### 📈 GitHub Stats
+###  GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="160" />
@@ -56,17 +56,17 @@ Goals:
 
 ---
 
-### 🌟 Featured Projects
+###  Featured Projects
 
 <table>
   <tr>
-    <th>🚀 Project</th>
-    <th>🔧 Tech Stack</th>
-    <th>📄 Description</th>
+    <th> Project</th>
+    <th> Tech Stack</th>
+    <th> Description</th>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b>🧠 AI MCQ Generator</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b> AI MCQ Generator</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-DotNet-blueviolet?style=flat&logo=dotnet" />
         <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
@@ -74,14 +74,14 @@ Goals:
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/library-config"><b>📚 Library Configurator</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/library-config"><b> Library Configurator</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-DotNet Framework-blue?style=flat&logo=dotnet" /></td>
-    <td>Rule-based system for managing campus-specific library book issue, renewals, fines, and item retention.</td>
+    <td>Rule-based system for managing campus-specific library book issues, renewals, fines, and item retention.</td>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b>🌳 Family Tree Platform</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b> Family Tree Platform</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-Node.js-green?style=flat&logo=nodedotjs" />
         <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
@@ -89,7 +89,7 @@ Goals:
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b>🎨 QR Code Styler</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b> QR Code Styler</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-Bootstrap-purple?style=flat&logo=bootstrap" /></td>
     <td>Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</td>
@@ -97,17 +97,23 @@ Goals:
 </table>
 
 
-### 🎯 Future Endeavors & Goals
+###  Future Endeavors & Goals
 
-* 📘 Complete Azure DevOps certification
-* 🤖 Build an AI-powered medicine identifier
-* 🏗️ Launch public **EdTech open-source** platform
-* 🌐 Host dynamic **GitHub Pages** portfolio
-* ✍️ Write technical blogs for the dev community
+*  Complete Azure DevOps certification
+*  Build an AI-powered medicine identifier
+*  Launch public **EdTech open-source** platform
+*  Host dynamic **GitHub Pages** portfolio
+*  Write technical blogs for the dev community
 
 ---
+### ✨ Fun Facts
 
-### 📫 Connect with Me
+*  I use a pencil to solve real-world problems
+*  I build like Iron Man, debug like Sherlock, and deploy like Flash
+*  My fuel: Coffee + Music + Deep Focus
+
+---
+###  Connect with Me
 
 <p align="center">
   <a href="mailto:d.adhikary.ai@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
@@ -117,16 +123,6 @@ Goals:
 
 ---
 
-### ✨ Fun Facts
-
-* 🧠 I use AI to solve real-world problems
-* 🧩 I build like Iron Man, debug like Sherlock, and deploy like Flash
-* ☕ My fuel: Coffee + Music + Deep Focus
-
----
-
-💡 *“Code is not just syntax — it’s how you think. Build with vision.”*
-
----
+ *“Code is not just syntax — it’s how you think. Build with vision.”*
 
 ```
