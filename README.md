@@ -94,29 +94,39 @@ Goals:
   </tr>
 </table>
 
-
-###  Future Endeavors & Goals
-
-*  Complete Azure DevOps certification
-*  Build an AI-powered medicine identifier
-*  Launch public **EdTech open-source** platform
-*  Host dynamic **GitHub Pages** portfolio
-*  Write technical blogs for the dev community
-
 ---
-###  Fun Facts
 
-*  I use a pencil to solve real-world problems
-*  I build like Iron Man, debug like Sherlock, and deploy like Flash
-*  My fuel: Coffee + Music + Deep Focus
-
----
-###  Connect with Me
+<!-- 🎯 Animated Goals Section -->
+<h3 align="center">Future Endeavors & Goals</h3>
 
 <p align="center">
-  <a href="mailto:d.adhikary.ai@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/dipankaradhikary/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/adhikary-dipankar"><img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3500&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=Complete+Azure+DevOps+certification;Build+an+AI-powered+medicine+identifier;Launch+public+EdTech+open-source+platform;Host+dynamic+GitHub+Pages+portfolio;Write+technical+blogs+for+the+dev+community" alt="Goals Typing Animation" />
+</p>
+
+---
+
+<!-- 😄 Animated Fun Facts Section -->
+<h3 align="center">Fun Facts</h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1200&color=F5A623&center=true&vCenter=true&width=700&lines=I+use+a+pencil+to+solve+real-world+problems;I+build+like+Iron+Man%2C+debug+like+Sherlock%2C+deploy+like+Flash;Fueled+by+Coffee+%2B+Music+%2B+Deep+Focus" alt="Fun Facts Typing Animation" />
+</p>
+
+---
+
+<!-- 📫 Contact Buttons Section -->
+<h3 align="center">Connect with Me</h3>
+
+<p align="center">
+  <a href="mailto:d.adhikary.ai@gmail.com">
+    <img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/dipankaradhikary/">
+    <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/adhikary-dipankar">
+    <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
 </p>
 
 ---
