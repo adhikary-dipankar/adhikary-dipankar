@@ -123,6 +123,6 @@ Goals:
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=2000&color=FACC15&width=800&lines=Code+is+not+just+syntax+--+it's+how+you+think.+Build+with+vision." alt="Animated Quote" />
-</p>
+<h4 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=4000&color=FACC15&width=800&lines=Code+is+not+just+syntax+--+it's+how+you+think.+Build+with+vision." alt="Animated Quote" />
+</h4>
