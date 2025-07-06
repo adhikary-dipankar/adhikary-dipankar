@@ -7,13 +7,18 @@
 <p align="center">
   <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="350"/>
 </p>
+
 ---
 
 ### Try
 <p align="center">
-  <a href="https://adhikary-dipankar.github.io/tic-tac-toe/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://adhikary-dipankar.github.io/clock/"><img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-</p> 
+  <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank">
+    <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-4CAF50?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/clock/" target="_blank">
+    <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-2196F3?style=for-the-badge&logoColor=white" />
+  </a>
+</p>
 
 
 ---
