@@ -68,6 +68,47 @@ Goals:
 
 ---
 
+### 🌟 Featured Projects
+
+<table>
+  <tr>
+    <th>🚀 Project</th>
+    <th>🔧 Tech Stack</th>
+    <th>📄 Description</th>
+  </tr>
+
+  <tr>
+    <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b>🧠 AI MCQ Generator</b></a></td>
+    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
+        <img src="https://img.shields.io/badge/-DotNet-blueviolet?style=flat&logo=dotnet" />
+        <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
+    <td>AI-powered mock test generator with OpenAI integration and intuitive UI for real exam simulation.</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://github.com/adhikary-dipankar/library-config"><b>📚 Library Configurator</b></a></td>
+    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
+        <img src="https://img.shields.io/badge/-DotNet Framework-blue?style=flat&logo=dotnet" /></td>
+    <td>Rule-based system for managing campus-specific library book issue, renewals, fines, and item retention.</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b>🌳 Family Tree Platform</b></a></td>
+    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
+        <img src="https://img.shields.io/badge/-Node.js-green?style=flat&logo=nodedotjs" />
+        <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
+    <td>Dynamic tree-structured visualization tool with editable family relations and life event timelines.</td>
+  </tr>
+
+  <tr>
+    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b>🎨 QR Code Styler</b></a></td>
+    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
+        <img src="https://img.shields.io/badge/-Bootstrap-purple?style=flat&logo=bootstrap" /></td>
+    <td>Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</td>
+  </tr>
+</table>
+
+
 ### 🎯 Future Endeavors & Goals
 
 * 📘 Complete Azure DevOps certification
@@ -96,7 +137,8 @@ Goals:
 
 ---
 
-> 💡 *“Code is not just syntax — it’s how you think. Build with vision.”*
----------------------------------------------------------------------------------------------------------------------
+💡 *“Code is not just syntax — it’s how you think. Build with vision.”*
+
+---
 
 ```
