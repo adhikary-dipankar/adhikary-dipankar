@@ -1,37 +1,36 @@
 
-<!-- Animated Typing Header -->
-<h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Dipankar+Adhikary;Full-stack+Developer+%7C+.NET+%7C+Angular;Tech+Consultant+at+PwC+India;Welcome+to+my+GitHub+Universe!" alt="Typing SVG" />
-</h1>
+<!-- Sacred Developer Codex Begins -->
+<h1 align="center"><em>🕯️ The Codex of Dipankar Adhikary 🕯️</em></h1>
+
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=IM+Fell+English+SC&size=24&pause=1000&center=true&vCenter=true&color=DAA520&width=600&lines=Greetings+Wanderer...;You+have+entered+the+realm+of+Dipankar;Full-Stack+Scribe+%7C+DotNet+Monk+%7C+Angular+Alchemist" alt="Typing SVG" /></p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="250" />
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="220" alt="Coding Monk Cat" />
 </p>
 
 ---
 
-<h2 align="center">👨‍💻 About Me</h2>
+## 📜 Scrolls of Identity
 
-```yaml
+````yaml
 Name: Dipankar Adhikary
-Role: Full Stack Developer
-Company: PwC India
-Location: Kolkata, India
-Email: d.adhikary.ai@gmail.com
-Tech Stack:
-  - .NET Core, MVC, Web API
-  - Angular, TypeScript, JavaScript
-  - SQL Server, MongoDB
-  - Microservices, Azure DevOps
-Goals:
-  - Build scalable AI-powered EdTech platforms
-  - Contribute to impactful open-source projects
-  - Architect reusable enterprise solutions
-````
+Title: Full-Stack Developer
+Order: PwC India Guild
+Sanctum: Kolkata, India
+Scrolls of Mastery:
+  - .NET Core | MVC | Web API
+  - Angular | TypeScript | JavaScript
+  - SQL Server | MongoDB
+  - Azure DevOps | Microservices
+Sacred Quests:
+  - Architect AI-powered EdTech platforms
+  - Forge open-source contributions for fellow devs
+  - Build holy reusable components across realms
+`````
 
 ---
 
-### 🛠️ Tech Stack
+## 🧪 Arcane Technologies (Runes of Power)
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,ts,js,html,css,mysql,mongodb,azure" height="45" />
@@ -39,7 +38,7 @@ Goals:
 
 ---
 
-### 🔧 Tools & Platforms
+## 🔧 Tools Blessed by the Elders
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=vscode,postman,git,github,figma,linux,visualstudio" height="45" />
@@ -47,98 +46,80 @@ Goals:
 
 ---
 
-### 📈 GitHub Stats
+## 🔮 GitHub Visions
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="160" />
-  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical" height="160"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=dracula" height="160" />
+  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=dracula" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=dracula" height="160"/>
 </p>
 
 ---
 
-### 🌟 Featured Projects
-
-| 🚀 Project                                                                  | 🔧 Tech Stack             | 🔍 Description                     |
-| --------------------------------------------------------------------------- | ------------------------- | ---------------------------------- |
-| [AI MCQ Generator](https://github.com/adhikary-dipankar/ai-mcq-generator)   | Angular, .NET, MongoDB    | AI-powered mock test generator     |
-| [Library Configurator](https://github.com/adhikary-dipankar/library-config) | Angular, .NET Framework   | Rule-based library issuance system |
-| [Family Tree Platform](https://github.com/adhikary-dipankar/family-tree)    | Angular, Node.js, MongoDB | Dynamic family hierarchy viewer    |
-| [QR Code Styler](https://github.com/adhikary-dipankar/qr-code-styler)       | Angular, Bootstrap        | Stylish QR generator for text      |
-
----
-
-### 🌟 Featured Projects
+## 🌟 Scrolls of Glory (Projects of the Dev Scribe)
 
 <table>
   <tr>
-    <th>🚀 Project</th>
-    <th>🔧 Tech Stack</th>
-    <th>📄 Description</th>
+    <th>📖 Project</th>
+    <th>📜 Tech Stack</th>
+    <th>📖 Ancient Wisdom</th>
   </tr>
 
   <tr>
     <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b>🧠 AI MCQ Generator</b></a></td>
-    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
-        <img src="https://img.shields.io/badge/-DotNet-blueviolet?style=flat&logo=dotnet" />
-        <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
-    <td>AI-powered mock test generator with OpenAI integration and intuitive UI for real exam simulation.</td>
+    <td>.NET, Angular, MongoDB</td>
+    <td>Auto-generates quests (MCQs) using mystical AI knowledge.</td>
   </tr>
 
   <tr>
     <td><a href="https://github.com/adhikary-dipankar/library-config"><b>📚 Library Configurator</b></a></td>
-    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
-        <img src="https://img.shields.io/badge/-DotNet Framework-blue?style=flat&logo=dotnet" /></td>
-    <td>Rule-based system for managing campus-specific library book issue, renewals, fines, and item retention.</td>
+    <td>.NET Framework, Angular</td>
+    <td>Library scroll issuing ritual based on campus runes.</td>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b>🌳 Family Tree Platform</b></a></td>
-    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
-        <img src="https://img.shields.io/badge/-Node.js-green?style=flat&logo=nodedotjs" />
-        <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
-    <td>Dynamic tree-structured visualization tool with editable family relations and life event timelines.</td>
+    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b>🌳 Family Tree of Ancients</b></a></td>
+    <td>Node.js, Angular, MongoDB</td>
+    <td>Visually maps your ancestral realm and bloodline lineage.</td>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b>🎨 QR Code Styler</b></a></td>
-    <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
-        <img src="https://img.shields.io/badge/-Bootstrap-purple?style=flat&logo=bootstrap" /></td>
-    <td>Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</td>
+    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b>🎨 QR Sigil Styler</b></a></td>
+    <td>Angular, Bootstrap</td>
+    <td>Crafts magical glyphs (QRs) with customizable enchantments.</td>
   </tr>
 </table>
 
+---
 
-### 🎯 Future Endeavors & Goals
+## 🧭 Prophecies (Future Endeavors)
 
-* 📘 Complete Azure DevOps certification
-* 🤖 Build an AI-powered medicine identifier
-* 🏗️ Launch public **EdTech open-source** platform
-* 🌐 Host dynamic **GitHub Pages** portfolio
-* ✍️ Write technical blogs for the dev community
+* 🏰 Complete Azure DevOps Knight Training
+* 🧪 Create a Potion (AI App) to Identify Medicinal Relics
+* 📚 Build a Shrine of Knowledge — the EdTech Open-Source Realm
+* 🌐 Launch a GitHub Pages Tome of Self
+* 🖋️ Chronicle the Developer Lore through Technical Scrolls
 
 ---
 
-### 📫 Connect with Me
+## 📬 Summon Me
 
 <p align="center">
-  <a href="mailto:d.adhikary.ai@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/dipankaradhikary/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/adhikary-dipankar"><img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="mailto:d.adhikary.ai@gmail.com"><img src="https://img.shields.io/badge/-Summon+via+Scrolls-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/dipankaradhikary/"><img src="https://img.shields.io/badge/-Speak+via+LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/adhikary-dipankar"><img src="https://img.shields.io/badge/-Observe+via+GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
 ---
 
-### ✨ Fun Facts
+## ⚜️ Fun Relics
 
-* 🧠 I use AI to solve real-world problems
-* 🧩 I build like Iron Man, debug like Sherlock, and deploy like Flash
-* ☕ My fuel: Coffee + Music + Deep Focus
-
----
-
-💡 *“Code is not just syntax — it’s how you think. Build with vision.”*
+* 🧠 Channeling ancient knowledge through modern AI
+* ⚒️ Building like Da Vinci, debugging like Sherlock
+* ☕ Fueled by mystical elixirs (coffee + lo-fi chants)
 
 ---
+
+ *“Code is the ink with which the future is written. Write wisely.”*
 
 ```
