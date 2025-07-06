@@ -1,13 +1,15 @@
-<!-- Animated Typing Header -->
+---
+
 <h1 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&center=true&vCenter=true&width=800&lines=Hi+%F0%9F%91%8B%2C+I'm+Dipankar+Adhikary;Full-stack+Developer+%7C+.NET+%7C+Angular;Tech+Consultant+at+PwC+India;Welcome+to+my+GitHub+Universe!" alt="Typing SVG" />
+  <p align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="450"/>
+</p>
 </h1>
 
-<p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="250" />
-</p>
 
 ---
+
 
 <h2 align="center"> About Me</h2>
 
@@ -113,7 +115,7 @@ Goals:
 
 ---
 
-###  Connect with Me
+###  Connect
 
 <p align="center">
   <a href="mailto:dipu98adhikary@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
