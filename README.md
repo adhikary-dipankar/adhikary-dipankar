@@ -83,7 +83,7 @@ Goals:
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b> AI MCQ Generator</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/ai-mcq-generator"><b> AI MCQ Test</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-DotNet-blueviolet?style=flat&logo=dotnet" />
         <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
@@ -91,14 +91,14 @@ Goals:
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/library-config"><b> Library Configurator</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/library-config"><b> Library MnG</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-DotNet Framework-blue?style=flat&logo=dotnet" /></td>
     <td>Rule-based system for managing campus-specific library book issues, renewals, fines, and item retention.</td>
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b> Family Tree Platform</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/family-tree"><b> Family Tree </b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-Node.js-green?style=flat&logo=nodedotjs" />
         <img src="https://img.shields.io/badge/-MongoDB-green?style=flat&logo=mongodb" /></td>
@@ -106,7 +106,7 @@ Goals:
   </tr>
 
   <tr>
-    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b> QR Code Styler</b></a></td>
+    <td><a href="https://github.com/adhikary-dipankar/qr-code-styler"><b> QR GenAI</b></a></td>
     <td><img src="https://img.shields.io/badge/-Angular-red?style=flat&logo=angular" />
         <img src="https://img.shields.io/badge/-Bootstrap-purple?style=flat&logo=bootstrap" /></td>
     <td>Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</td>
