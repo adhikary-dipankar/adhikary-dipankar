@@ -19,6 +19,11 @@
     <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-2196F3?style=for-the-badge&logoColor=white" />
   </a>
 </p>
+<p>
+  <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
+    <img src="https://img.shields.io/badge/Vertical%20Edu-Track%20Demo-2196F3?style=for-the-badge&logoColor=white" />
+  </a>
+</p>
 
 
 ---
