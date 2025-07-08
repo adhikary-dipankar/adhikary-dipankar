@@ -12,21 +12,15 @@
 
 ### Try
 <h4 align="center">
-  <p>
   <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank">
     <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-4CAF50?style=for-the-badge&logoColor=white" />
   </a>
-</p>
-<p>
   <a href="https://adhikary-dipankar.github.io/clock/" target="_blank">
     <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-2196F3?style=for-the-badge&logoColor=white" />
   </a>
-</p>
-<p>
   <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
     <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-2196F3?style=for-the-badge&logoColor=white" />
   </a>
-</p>
 </h4>
 
 
@@ -34,7 +28,7 @@
 ---
 
 
-<h2 align="center"> About Me</h2>
+<h2> About Me</h2>
 
 ```yaml
 Name: Dipankar Adhikary
