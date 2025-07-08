@@ -66,9 +66,9 @@ Goals:
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="120" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="160" />
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical" height="200"/>
-  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="100" />
+  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="160" />
 </p>
 
 ---
