@@ -5,8 +5,10 @@
 </h1>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="350"/>
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="350" style="background:white; padding: 10px; border-radius: 12px;" />
 </p>
+
+
 
 ---
 
@@ -52,7 +54,7 @@ Goals:
 ###  Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,ts,js,html,css,mysql,mongodb,azure" height="25" />
+  <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,docker,ts,js,html,css,mysql,mongodb,azure" height="35" />
 </p>
 
 ---
@@ -60,16 +62,21 @@ Goals:
 ###  Tools & Platforms
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=vscode,postman,git,github,figma,linux,visualstudio" height="25" />
+  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,sqlite,git,postman,github,figma,linux,postgres,firebase,redis" height="35" />
 </p>
 
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" height="160" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical" height="200"/>
-  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adhikary-dipankar&show_icons=true&theme=radical" width="49%" />
+  <img src="https://streak-stats.demolab.com?user=adhikary-dipankar&theme=radical" width="49%" />
 </p>
+
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adhikary-dipankar&layout=compact&theme=radical&hide_title=false&card_width=1000" />
+</p>
+
 
 ---
 
