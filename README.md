@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-2196F3?style=for-the-badge&logoColor=white" />
   </a>
   <a href="https://aiassistantapi.onrender.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Edu%20Ai-Assistance%20Live-2196F3?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/AI%20Assistance-API%20Live-2196F3?style=for-the-badge&logoColor=white" />
   </a>
 </h4>
 
