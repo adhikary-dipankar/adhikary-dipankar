@@ -28,6 +28,23 @@
   </a>
 </h4>
 
+<h4 align="center">
+  <a href="https://adhikary-dipankar.github.io/e-commerce-1/" target="_blank">
+    <img src="https://img.shields.io/badge/E--Commerce--1-Live%20Demo-4CAF50?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/e-commerce-2/" target="_blank">
+    <img src="https://img.shields.io/badge/E--Commerce--2-Live%20Demo-2196F3?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/e-shop-1/" target="_blank">
+    <img src="https://img.shields.io/badge/E--Shop--1-Explore%20Now-FF9800?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/portfolio-1/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio--1-Template-9C27B0?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio--2-Template-3F51B5?style=for-the-badge&logoColor=white" />
+  </a>
+</h4>
 
 
 ---
