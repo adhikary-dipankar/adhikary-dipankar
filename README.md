@@ -13,20 +13,13 @@
 ---
 
 ### Try
+<h3 align="center">
+    <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
+    <img src="https://img.shields.io/badge/View--Portfolio-615FFF?style=for-the-badge&logoColor=black" />
+  </a>
+</h3>
 
 
-<h4 align="center">
-  <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank">
-    <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-AED581?style=for-the-badge&logoColor=white" />
-  </a>
-  <a href="https://adhikary-dipankar.github.io/clock/" target="_blank">
-    <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-7008E7?style=for-the-badge&logoColor=white" />
-  </a>
-  <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
-    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-FFF176?style=for-the-badge&logoColor=black" />
-  </a>
-
-</h4>
 <h4 align="center">
   <a href="https://aiassistantapi.onrender.com/" target="_blank">
     <img src="https://img.shields.io/badge/AI%20Assistance-API%20Live-34A6F4?style=for-the-badge&logoColor=white" />
@@ -47,12 +40,22 @@
   <a href="https://adhikary-dipankar.github.io/portfolio-1/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio--1-Template-F54927?style=for-the-badge&logoColor=black" />
   </a>
-  <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio--2-Template-615FFF?style=for-the-badge&logoColor=black" />
-  </a>
     <a href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank">
     <img src="https://img.shields.io/badge/Business--Portfolio--1-Explore-F5276C?style=for-the-badge&logoColor=black" />
   </a>
+</h4>
+
+<h4 align="center">
+  <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank">
+    <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-AED581?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/clock/" target="_blank">
+    <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-7008E7?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
+    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-FFF176?style=for-the-badge&logoColor=black" />
+  </a>
+
 </h4>
 
 
