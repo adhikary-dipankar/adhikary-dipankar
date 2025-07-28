@@ -13,38 +13,45 @@
 ---
 
 ### Try
+
+
 <h4 align="center">
   <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank">
-    <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-4CAF50?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Tic--Tac--Toe-Play%20Now-AED581?style=for-the-badge&logoColor=white" />
   </a>
   <a href="https://adhikary-dipankar.github.io/clock/" target="_blank">
-    <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-03A9F4?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-81D4FA?style=for-the-badge&logoColor=white" />
   </a>
   <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
-    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-8BC34A?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-FFF176?style=for-the-badge&logoColor=black" />
   </a>
+
+</h4>
+<h4 align="center">
   <a href="https://aiassistantapi.onrender.com/" target="_blank">
-    <img src="https://img.shields.io/badge/AI%20Assistance-API%20Live-E91E63?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/AI%20Assistance-API%20Live-CE93D8?style=for-the-badge&logoColor=white" />
+  </a>
+    <a href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank">
+    <img src="https://img.shields.io/badge/E--Commerce--1-Live%20Demo-90CAF9?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://adhikary-dipankar.github.io/E-Commerce-2/" target="_blank">
+    <img src="https://img.shields.io/badge/E--Commerce--2-Live%20Demo-A5D6A7?style=for-the-badge&logoColor=white" />
   </a>
 </h4>
 
 <h4 align="center">
-  <a href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank">
-    <img src="https://img.shields.io/badge/E--Commerce--1-Live%20Demo-673AB7?style=for-the-badge&logoColor=white" />
-  </a>
-  <a href="https://adhikary-dipankar.github.io/E-Commerce-2/" target="_blank">
-    <img src="https://img.shields.io/badge/E--Commerce--2-Live%20Demo-009688?style=for-the-badge&logoColor=white" />
-  </a>
+
   <a href="https://adhikary-dipankar.github.io/E-Shop-1/" target="_blank">
-    <img src="https://img.shields.io/badge/E--Shop--1-Explore%20Now-FF5722?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/E--Shop--1-Explore%20Now-FFCC80?style=for-the-badge&logoColor=black" />
   </a>
   <a href="https://adhikary-dipankar.github.io/portfolio-1/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio--1-Template-607D8B?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Portfolio--1-Template-B0BEC5?style=for-the-badge&logoColor=black" />
   </a>
   <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio--2-Template-795548?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Portfolio--2-Template-FFE082?style=for-the-badge&logoColor=black" />
   </a>
 </h4>
+
 
 
 
