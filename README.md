@@ -41,7 +41,7 @@
     <img src="https://img.shields.io/badge/Portfolio--1-Template-F54927?style=for-the-badge&logoColor=black" />
   </a>
     <a href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank">
-    <img src="https://img.shields.io/badge/Business--Portfolio--1-Explore-F5276C?style=for-the-badge&logoColor=black" />
+    <img src="https://img.shields.io/badge/Business--Portfolio--1-Explore-FF6347?style=for-the-badge&logoColor=black" />
   </a>
 </h4>
 
@@ -53,7 +53,7 @@
     <img src="https://img.shields.io/badge/Vertical%20Clock-Live%20Demo-7008E7?style=for-the-badge&logoColor=white" />
   </a>
   <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank">
-    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-FFF176?style=for-the-badge&logoColor=black" />
+    <img src="https://img.shields.io/badge/Edu%20Track-Future%20Demo-FFD700?style=for-the-badge&logoColor=black" />
   </a>
 
 </h4>
@@ -61,10 +61,10 @@
 
 <h4 align="center">
     <a href="https://adhikary-dipankar.github.io/sip-calc/" target="_blank">
-    <img src="https://img.shields.io/badge/SIP--CalC--Live%20Demo-90CAF9?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/SIP%20CalC-Live%20Demo-48D1CC?style=for-the-badge&logoColor=yellow" />
   </a>
   <a href="https://adhikary-dipankar.github.io/zen-gchat/" target="_blank">
-    <img src="https://img.shields.io/badge/Zen--Zone--Live%20Chat-E12AFB?style=for-the-badge&logoColor=white" />
+    <img src="https://img.shields.io/badge/Zen%20Zone-Live%20Chat-94E647?style=for-the-badge&logoColor=white" />
   </a>
 </h4>
 
