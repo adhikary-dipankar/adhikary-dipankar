@@ -17,6 +17,10 @@
     <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
     <img src="https://img.shields.io/badge/View--Portfolio-615FFF?style=for-the-badge&logoColor=black" />
   </a>
+
+  <a href="https://dipankar-adhikary.lovable.app/" target="_blank">
+    <img src="https://img.shields.io/badge/View--Portfolio-615FFF?style=for-the-badge&logoColor=black" />
+  </a>
 </h3>
 
 
