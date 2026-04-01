@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipankar Adhikary | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0d1117; color: #c9d1d9; }
+        .glass-card { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); border: 1px solid #30363d; border-radius: 1.5rem; }
+        .gradient-text { background: linear-gradient(90deg, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-link:hover { color: #58a6ff; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-6 py-3 border-[#30363d]">
+            <div class="font-bold text-xl tracking-tight text-white">DA<span class="text-blue-500">.</span></div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#about" class="nav-link transition">About</a>
+                <a href="#projects" class="nav-link transition">Projects</a>
+                <a href="https://github.com/adhikary-dipankar" target="_blank" class="nav-link transition">GitHub</a>
+                <a href="mailto:d.adhikary.ai@gmail.com" class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8 flex justify-center">
+                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&center=true&vCenter=true&width=800&color=58A6FF&lines=Hi+%F0%9F%91%8B%2C+I'm+Dipankar+Adhikary;Full-stack+Developer+%7C+.NET+%7C+Angular;Tech+Consultant+at+PwC" alt="Typing SVG" />
+            </div>
+            <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                Architecting scalable enterprise solutions with <span class="text-blue-400">.NET Core</span> and <span class="text-purple-400">Angular</span>. 
+                Focusing on AI-powered EdTech and clean, high-performance code.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://adhikary-dipankar.github.io/portfolio-2/" class="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-xl">View Portfolio</a>
+                <a href="#projects" class="px-8 py-3 bg-slate-800 text-white font-bold rounded-full hover:bg-slate-700 transition-all border border-slate-700">Explore Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass-card p-8 border-[#30363d]">
+                <h3 class="text-2xl font-bold text-white mb-4">The Developer Persona</h3>
+                <pre class="text-sm text-blue-400 leading-relaxed">
+<span class="text-slate-500">yaml</span>
+Name: Dipankar Adhikary
+Role: Full Stack Developer
+Company: PwC India
+Location: Kolkata, India
+Stack: [.NET Core, Angular, SQL Server]
+                </pre>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-6">Mastered Technologies</h2>
+                <div class="grid grid-cols-4 gap-4">
+                    <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,docker,ts,js,mysql,mongodb" alt="stack" class="col-span-4" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 bg-[#090c10]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center underline decoration-blue-500 underline-offset-8">Featured Builds</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
+                    <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition">AI MCQ Test</h3>
+                    <p class="text-sm text-slate-400 mb-4">AI-powered mock test generator with OpenAI integration for exam simulation.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-red-900/30 text-red-400 px-2 py-1 rounded">Angular</span>
+                        <span class="text-[10px] bg-purple-900/30 text-purple-400 px-2 py-1 rounded">.NET</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
+                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-sitemap"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition">Family Tree</h3>
+                    <p class="text-sm text-slate-400 mb-4">Dynamic visualization tool with editable relations and timeline integration.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-green-900/30 text-green-400 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-[10px] bg-blue-900/30 text-blue-400 px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
+                    <div class="text-teal-500 text-3xl mb-4"><i class="fas fa-calculator"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition">SIP Calculator</h3>
+                    <p class="text-sm text-slate-400 mb-4">Financial tool for calculating investment returns with real-time charts.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-teal-900/30 text-teal-400 px-2 py-1 rounded">Vanilla JS</span>
+                        <span class="text-[10px] bg-slate-700 text-white px-2 py-1 rounded">Live Demo</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 border-t border-[#30363d] text-center">
+        <h2 class="text-2xl font-bold text-white mb-6">Let's connect</h2>
+        <div class="flex justify-center gap-6 mb-10">
+            <a href="https://github.com/adhikary-dipankar" class="text-3xl text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/dipankar-adhikary" class="text-3xl text-slate-400 hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:d.adhikary.ai@gmail.com" class="text-3xl text-slate-400 hover:text-red-400 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-slate-500 text-xs tracking-widest uppercase">© 2026 Dipankar Adhikary • Built with Coffee & Code</p>
+    </footer>
+
+</body>
+</html>
