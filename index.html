@@ -4,117 +4,729 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="aW7hVgzXyqgMVdAccV4kLY94HUCFFjRM8CP8HChvklw" />
-    <title>Dipankar Adhikary | Full-Stack Developer</title>
+
+    <title>Dipankar Adhikary - Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0d1117; color: #c9d1d9; }
-        .glass-card { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(10px); border: 1px solid #30363d; border-radius: 1.5rem; }
-        .gradient-text { background: linear-gradient(90deg, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-link:hover { color: #58a6ff; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-blur {
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            perspective: 1000px;
+        }
+        
+        .project-card:hover .project-content {
+            transform: rotateY(10deg);
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid #6a9ae9;
+            white-space: nowrap;
+            animation: typing 4.5s steps(50, end), blink-caret .95s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #1d88be }
+        }
+
+        /* Mobile Menu Transitions */
+        .mobile-menu-enter { opacity: 0; transform: translateY(-10px) scale(0.95); pointer-events: none; }
+        .mobile-menu-active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+
+        /* Like Button CSS */
+        .heart-container { --heart-color: rgb(147, 58, 235); position: relative; width: 50px; height: 50px; transition: .3s; }
+        .heart-container .checkbox { position: absolute; width: 100%; height: 100%; opacity: 0; z-index: 20; cursor: pointer; }
+        .heart-container .svg-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+        .heart-container .svg-outline, .heart-container .svg-filled { fill: var(--heart-color); position: absolute; }
+        .heart-container .svg-filled { animation: keyframes-svg-filled 1s; display: none; }
+        .heart-container .svg-celebrate { position: absolute; animation: keyframes-svg-celebrate .5s; animation-fill-mode: forwards; display: none; stroke: var(--heart-color); fill: var(--heart-color); stroke-width: 2px; }
+        .heart-container .checkbox:checked~.svg-container .svg-filled { display: block }
+        .heart-container .checkbox:checked~.svg-container .svg-celebrate { display: block }
+        
+        @keyframes keyframes-svg-filled { 0% { transform: scale(0); } 25% { transform: scale(1.2); } 50% { transform: scale(1); filter: brightness(1.5); } }
+        @keyframes keyframes-svg-celebrate { 0% { transform: scale(0); } 50% { opacity: 1; filter: brightness(1.5); } 100% { transform: scale(1.4); opacity: 0; display: none; } }
     </style>
 </head>
-<body class="min-h-screen">
+<body class="bg-gray-50 text-gray-800">
+    
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 relative">
+                <div class="flex items-center">
+                    <a href="#home" class="text-xl font-bold gradient-text">Dipankar Adhikary</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition font-medium">Experience</a>
+                    <a href="#demos" class="text-gray-700 hover:text-blue-600 transition font-medium">Live Demos</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition font-medium">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+                </div>
 
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-6 py-3 border-[#30363d]">
-            <div class="font-bold text-xl tracking-tight text-white">DA<span class="text-blue-500">.</span></div>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#about" class="nav-link transition">About</a>
-                <a href="#projects" class="nav-link transition">Projects</a>
-                <a href="https://github.com/adhikary-dipankar" target="_blank" class="nav-link transition">GitHub</a>
-                <a href="mailto:d.adhikary.ai@gmail.com" class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700 transition">Contact</a>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition">
+                        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-enter absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex flex-col space-y-2 md:hidden z-50 transition-all duration-300">
+            <a href="#home" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Home</a>
+            <a href="#about" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">About</a>
+            <a href="#demos" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Live Demos</a>
+            <a href="#projects" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Projects</a>
+            <a href="#skills" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Skills</a>
+            <a href="#contact" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-center bg-blue-600 !text-white mt-2">Hire Me</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-8 flex justify-center">
-                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&center=true&vCenter=true&width=800&color=58A6FF&lines=Hi+%F0%9F%91%8B%2C+I'm+Dipankar+Adhikary;Full-stack+Developer+%7C+.NET+%7C+Angular;Tech+Consultant+at+PwC" alt="Typing SVG" />
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-14 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center w-full">
+            
+            <div class="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                    Hello, I'm <span class="gradient-text">Dipankar Adhikary</span>
+                </h1>
+                <div class="typewriter mb-6 w-full">
+                    <h2 class="text-xl sm:text-1xl md:text-2xl text-gray-600 font-medium">
+                        Full-Stack Developer | Tech Consultant
+                    </h2>
+                </div>
+                <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-lg">
+                    Tech Consultant at PwC India. I architect scalable enterprise solutions with .NET and Angular, and build intelligent workflows through AI integration.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+                    <button onclick="window.location.href='#contact'" class="bg-white w-full sm:w-48 rounded-2xl h-14 relative text-black text-lg font-semibold group transition flex items-center justify-center shadow-sm hover:shadow-md" type="button">
+                        <div class="bg-blue-500 rounded-xl h-12 w-12 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"></div>
+                        <span class="relative z-20 flex items-center gap-2 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i> Let's Talk
+                        </span>
+                    </button>
+                    <button onclick="window.location.href='#demos'" class="bg-gray-900 text-white w-full sm:w-48 rounded-2xl h-14 text-lg font-semibold transition hover:bg-gray-800 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                        <i class="fas fa-play-circle text-blue-400"></i> Live Demos
+                    </button>
+                </div>
+                <div class="flex space-x-6 mt-8 justify-center md:justify-start w-full">
+                    <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="text-blue-600 hover:scale-125 duration-200 transition" title="LinkedIn">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="text-gray-800 hover:scale-125 duration-200 transition" title="GitHub">
+                        <i class="fab fa-github text-3xl"></i>
+                    </a>
+                    <a href="mailto:d.adhikary.ai@gmail.com" class="text-red-500 hover:scale-125 duration-200 transition" title="Email">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </a>
+                </div>
             </div>
-            <p class="text-lg text-slate-400 mb-10 leading-relaxed">
-                Architecting scalable enterprise solutions with <span class="text-blue-400">.NET Core</span> and <span class="text-purple-400">Angular</span>. 
-                Focusing on AI-powered EdTech and clean, high-performance code.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://adhikary-dipankar.github.io/portfolio-2/" class="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-xl">View Portfolio</a>
-                <a href="#projects" class="px-8 py-3 bg-slate-800 text-white font-bold rounded-full hover:bg-slate-700 transition-all border border-slate-700">Explore Projects</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="glass-card p-8 border-[#30363d]">
-                <h3 class="text-2xl font-bold text-white mb-4">The Developer Persona</h3>
-                <pre class="text-sm text-blue-400 leading-relaxed">
-<span class="text-slate-500">yaml</span>
-Name: Dipankar Adhikary
-Role: Full Stack Developer
-Company: PwC India
-Location: Kolkata, India
-Stack: [.NET Core, Angular, SQL Server]
-                </pre>
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold text-white mb-6">Mastered Technologies</h2>
-                <div class="grid grid-cols-4 gap-4">
-                    <img src="https://skillicons.dev/icons?i=dotnet,angular,nodejs,docker,ts,js,mysql,mongodb" alt="stack" class="col-span-4" />
+            
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
+                <div class="relative flex justify-center">
+                    <div class="w-56 h-56 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white">
+                        <img src="./sscProfile.png" class="w-full h-full object-cover rounded-full p-4">
+                    </div>
+                    <div class="absolute -bottom-5 right-1/2 translate-x-1/2 md:translate-x-0 md:right-0 bg-white p-4 rounded-xl shadow-xl hero-blur min-w-[120px] border border-gray-100">
+                        <div class="text-center animate-pulse">
+                            <p class="font-bold text-blue-600 text-lg">PwC India</p>
+                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wider mt-1">Tech Consultant</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 px-6 bg-[#090c10]">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center underline decoration-blue-500 underline-offset-8">Featured Builds</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+    <section id="demos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Live <span class="gradient-text">Deployments & Demos</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto">A curated collection of my live projects, ranging from AI microservices to full-scale e-commerce templates.</p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
-                    <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-robot"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition">AI MCQ Test</h3>
-                    <p class="text-sm text-slate-400 mb-4">AI-powered mock test generator with OpenAI integration for exam simulation.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] bg-red-900/30 text-red-400 px-2 py-1 rounded">Angular</span>
-                        <span class="text-[10px] bg-purple-900/30 text-purple-400 px-2 py-1 rounded">.NET</span>
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-100 p-6 rounded-3xl border border-indigo-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-lg">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-indigo-900">Portfolios</h3>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
+                            <span class="text-indigo-800 font-medium">Main Portfolio</span>
+                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/portfolio-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
+                            <span class="text-indigo-800 font-medium">Advanced Template</span>
+                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
+                            <span class="text-indigo-800 font-medium">Business Module</span>
+                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
-                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-sitemap"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition">Family Tree</h3>
-                    <p class="text-sm text-slate-400 mb-4">Dynamic visualization tool with editable relations and timeline integration.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] bg-green-900/30 text-green-400 px-2 py-1 rounded">Node.js</span>
-                        <span class="text-[10px] bg-blue-900/30 text-blue-400 px-2 py-1 rounded">MongoDB</span>
+    
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-3xl border border-blue-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-lg">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-blue-900">E-Commerce</h3>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
+                            <span class="text-blue-800 font-medium">E-Commerce v1</span>
+                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/E-Commerce-2/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
+                            <span class="text-blue-800 font-medium">E-Commerce v2</span>
+                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
+                        </a>
+                        <a href="https://v0-fertilizer-shop-g1g7f28bv-idiomscode-7207s-projects.vercel.app" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
+                            <span class="text-blue-800 font-medium">Fertilizer Shop App</span>
+                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all group">
-                    <div class="text-teal-500 text-3xl mb-4"><i class="fas fa-calculator"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition">SIP Calculator</h3>
-                    <p class="text-sm text-slate-400 mb-4">Financial tool for calculating investment returns with real-time charts.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] bg-teal-900/30 text-teal-400 px-2 py-1 rounded">Vanilla JS</span>
-                        <span class="text-[10px] bg-slate-700 text-white px-2 py-1 rounded">Live Demo</span>
+    
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-100 p-6 rounded-3xl border border-emerald-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-emerald-600 text-white p-2.5 rounded-xl shadow-lg">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-emerald-900">AI & Utilities</h3>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://aiassistantapi.onrender.com/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
+                            <span class="text-emerald-800 font-medium">AI Assistance API</span>
+                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/sip-calc/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
+                            <span class="text-emerald-800 font-medium">SIP Calculator</span>
+                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/zen-gchat/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
+                            <span class="text-emerald-800 font-medium">Zen Zone Chat</span>
+                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
+                        </a>
                     </div>
                 </div>
-
+    
+                <div class="bg-gradient-to-br from-purple-50 to-fuchsia-100 p-6 rounded-3xl border border-purple-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-purple-600 text-white p-2.5 rounded-xl shadow-lg">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-purple-900">EdTech</h3>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://adhikary-dipankar.github.io/rbi-grade-b-resources/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
+                            <span class="text-purple-800 font-medium">RBI Grade-B Prep</span>
+                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
+                        </a>
+                        <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
+                            <span class="text-purple-800 font-medium">Edu Track Demo</span>
+                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
+                        </a>
+                        <a href="https://nexus-p1obbue13-idiomscode-7207s-projects.vercel.app" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
+                            <span class="text-purple-800 font-medium">Art Nexus (Ind)</span>
+                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-3xl border border-orange-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-orange-600 text-white p-2.5 rounded-xl shadow-lg">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-orange-900">Games & Fun</h3>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://adhikary-dipankar.github.io/suduko/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
+                            <span class="text-orange-800 font-medium">Sudoku Master</span>
+                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
+                            <span class="text-orange-800 font-medium">Tic Tac Toe</span>
+                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
+                        </a>
+                        <a href="https://adhikary-dipankar.github.io/clock/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
+                            <span class="text-orange-800 font-medium">Vertical Clock</span>
+                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="bg-gray-900 p-8 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center group">
+                    <h3 class="text-white font-bold text-xl mb-4">Want to see the code?</h3>
+                    <p class="text-gray-400 text-sm mb-6">All these projects are open-source and hosted on my GitHub.</p>
+                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="bg-white text-gray-900 px-6 py-3 rounded-2xl font-bold hover:bg-blue-500 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fab fa-github"></i> Visit GitHub
+                    </a>
+                </div>
+    
             </div>
         </div>
     </section>
 
-    <footer class="py-20 px-6 border-t border-[#30363d] text-center">
-        <h2 class="text-2xl font-bold text-white mb-6">Let's connect</h2>
-        <div class="flex justify-center gap-6 mb-10">
-            <a href="https://github.com/adhikary-dipankar" class="text-3xl text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/dipankar-adhikary" class="text-3xl text-slate-400 hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:d.adhikary.ai@gmail.com" class="text-3xl text-slate-400 hover:text-red-400 transition"><i class="fas fa-envelope"></i></a>
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10"></div>
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Developer Goals</h3>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <span>Build scalable AI-powered EdTech platforms.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <span>Contribute to impactful open-source projects.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <span>Architect reusable enterprise solutions.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <span>Complete Azure DevOps certification.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <span>Build an AI-powered medicine identifier.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
+                            <div class="bg-blue-100 p-3 rounded-xl text-blue-600">
+                                <i class="fas fa-pencil-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Problem Solver</h4>
+                                <p class="text-gray-500 text-sm mt-1">I use a pencil to solve real-world problems before writing a single line of code.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
+                            <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600">
+                                <i class="fas fa-bolt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">The Developer Mantra</h4>
+                                <p class="text-gray-500 text-sm mt-1">Build like Iron Man, debug like Sherlock, and deploy like Flash.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
+                            <div class="bg-purple-100 p-3 rounded-xl text-purple-600">
+                                <i class="fas fa-mug-hot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">My Fuel</h4>
+                                <p class="text-gray-500 text-sm mt-1">Powered exclusively by Coffee, Music, and Deep Focus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-slate-500 text-xs tracking-widest uppercase">© 2026 Dipankar Adhikary • Built with Coffee & Code</p>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Professional <span class="gradient-text">Experience</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/3 text-center md:text-right md:border-r-2 border-gray-200 md:pr-8">
+                    <img src="./pwci.png" alt="PwC Logo" class="h-25 object-contain mx-auto md:ml-auto md:mr-0 mb-4 opacity-80">
+                    <h3 class="text-xl font-bold text-gray-800">PwC India</h3>
+                    <p class="text-blue-600 font-semibold mt-1">Kolkata, India</p>
+                    <p class="text-gray-500 text-sm mt-1">Jul 2023 - Present</p>
+                </div>
+                <div class="md:w-2/3">
+                    <h4 class="text-2xl font-bold mb-2 text-gray-800">Tech Consultant</h4>
+                    <p class="text-gray-500 font-medium mb-4 uppercase text-xs tracking-wider">Full Stack Development (.NET & Angular)</p>
+                    <ul class="list-none space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Spearheading full-stack enterprise solutions utilizing .NET Core, MVC, Web API, and Angular.</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Architecting reusable systems with microservices and integrating SQL Server & MongoDB.</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Managing end-to-end deployments leveraging Azure DevOps infrastructure.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Featured <span class="gradient-text">GitHub Projects</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-8 project-content flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="bg-red-50 text-red-600 p-3 rounded-xl"><i class="fas fa-robot text-xl"></i></div>
+                            <a href="https://github.com/adhikary-dipankar/ai-mcq-generator" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">AI MCQ Test</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">AI-powered mock test generator with OpenAI integration and intuitive UI for real exam simulation.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
+                            <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-md font-medium border border-purple-100">.NET Core</span>
+                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/adhikary-dipankar/ai-mcq-generator" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-8 project-content flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="bg-blue-50 text-blue-600 p-3 rounded-xl"><i class="fas fa-book-open text-xl"></i></div>
+                            <a href="https://github.com/adhikary-dipankar/library-config" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Library MnG</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">Rule-based system for managing campus-specific library book issues, renewals, fines, and item retention.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
+                            <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-md font-medium border border-blue-100">.NET Framework</span>
+                        </div>
+                        <a href="https://github.com/adhikary-dipankar/library-config" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-8 project-content flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="bg-green-50 text-green-600 p-3 rounded-xl"><i class="fas fa-sitemap text-xl"></i></div>
+                            <a href="https://github.com/adhikary-dipankar/family-tree" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Family Tree</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">Dynamic tree-structured visualization tool with editable family relations and life event timelines.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
+                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">Node.js</span>
+                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/adhikary-dipankar/family-tree" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-8 project-content flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="bg-purple-50 text-purple-600 p-3 rounded-xl"><i class="fas fa-qrcode text-xl"></i></div>
+                            <a href="https://github.com/adhikary-dipankar/qr-code-styler" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">QR GenAI</h3>
+                        <p class="text-gray-500 mb-6 flex-grow">Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
+                            <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-md font-medium border border-purple-100">Bootstrap</span>
+                        </div>
+                        <a href="https://github.com/adhikary-dipankar/qr-code-styler" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/adhikary-dipankar" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition shadow-lg hover:shadow-xl">
+                    <i class="fab fa-github text-xl"></i> Explore All GitHub Repositories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Technical <span class="gradient-text">Arsenal</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-code text-blue-500"></i> Languages & Frameworks</h3>
+                    <div class="space-y-5 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">.NET Core / C#</span><span>90%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">Angular / TypeScript</span><span>90%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-500 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">JavaScript</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">MVC & Web API</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-database text-green-500"></i> Databases & Infrastructure</h3>
+                    <div class="space-y-5 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">SQL Server</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">MongoDB</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full skill-bar" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">Azure DevOps / Microservices</span><span>75%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-blue-400 h-2 rounded-full skill-bar" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="font-medium">Git / GitHub / Postman</span><span>90%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-gray-800 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h3 class="text-gray-500 uppercase tracking-widest text-sm font-bold mb-6">Tools & Platforms</h3>
+                <img src="https://skillicons.dev/icons?i=vscode,visualstudio,sqlite,git,postman,github,figma,linux,postgres,firebase,redis" class="mx-auto" alt="Tools Grid">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Interested in working together or want to discuss enterprise architecture? Feel free to reach out.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto">
+                
+                <div class="w-full grid sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="bg-blue-100 p-4 rounded-full text-blue-600 mb-4"><i class="fas fa-map-marker-alt text-2xl"></i></div>
+                        <h4 class="font-bold text-lg text-gray-800">Location</h4>
+                        <p class="text-gray-500 mt-1">Kolkata, West Bengal, India</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="bg-red-100 p-4 rounded-full text-red-600 mb-4"><i class="fas fa-envelope text-2xl"></i></div>
+                        <h4 class="font-bold text-lg text-gray-800">Primary Email</h4>
+                        <a href="mailto:d.adhikary.ai@gmail.com" class="text-blue-600 hover:underline mt-1 font-medium">d.adhikary.ai@gmail.com</a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="bg-indigo-100 p-4 rounded-full text-indigo-600 mb-4"><i class="fab fa-linkedin-in text-2xl"></i></div>
+                        <h4 class="font-bold text-lg text-gray-800">LinkedIn</h4>
+                        <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="text-blue-600 hover:underline mt-1 font-medium">Connect Online</a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="bg-gray-100 p-4 rounded-full text-gray-800 mb-4"><i class="fab fa-github text-2xl"></i></div>
+                        <h4 class="font-bold text-lg text-gray-800">GitHub Universe</h4>
+                        <a href="https://github.com/adhikary-dipankar" target="_blank" class="text-blue-600 hover:underline mt-1 font-medium">@adhikary-dipankar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-12">
+                <div class="heart-container" title="Show some love!">
+                    <input type="checkbox" class="checkbox" id="like-btn">
+                    <div class="svg-container">
+                        <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg"><path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"></path></svg>
+                        <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg"><path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z"></path></svg>
+                        <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg"><polygon points="10,10 20,20"></polygon><polygon points="10,50 20,50"></polygon><polygon points="20,80 30,70"></polygon><polygon points="90,10 80,20"></polygon><polygon points="90,50 80,50"></polygon><polygon points="80,80 70,70"></polygon></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white">DA<span class="text-blue-500">.</span></h3>
+                    <p class="text-gray-400 mt-2 text-sm">Full Stack Developer | .NET & Angular</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gray-600 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:d.adhikary.ai@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-500 hover:text-white transition">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm tracking-wider uppercase">Code is not just syntax -- it's how you think. Build with vision.</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        // Enhanced Mobile Menu Toggle (Smooth floating card)
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (mobileMenu.classList.contains('mobile-menu-enter')) {
+                // Open
+                mobileMenu.classList.remove('mobile-menu-enter');
+                mobileMenu.classList.add('mobile-menu-active');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                // Close
+                mobileMenu.classList.remove('mobile-menu-active');
+                mobileMenu.classList.add('mobile-menu-enter');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                if (mobileMenu.classList.contains('mobile-menu-active')) {
+                    mobileMenu.classList.remove('mobile-menu-active');
+                    mobileMenu.classList.add('mobile-menu-enter');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            }
+        });
+        
+        // Animate skill bars when scrolled into view
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+        
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+        
+        let skillsAnimated = false;
+        window.addEventListener('scroll', function() {
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection && isInViewport(skillsSection) && !skillsAnimated) {
+                animateSkillBars();
+                skillsAnimated = true;
+            }
+        });
+        
+        // Smooth scrolling for anchor links and auto-close mobile menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Account for fixed navbar
+                        behavior: 'smooth'
+                    });
+                    
+                    // Auto Close mobile menu
+                    if (mobileMenu.classList.contains('mobile-menu-active')) {
+                        mobileMenu.classList.remove('mobile-menu-active');
+                        mobileMenu.classList.add('mobile-menu-enter');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
