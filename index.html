@@ -1,744 +1,1822 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="aW7hVgzXyqgMVdAccV4kLY94HUCFFjRM8CP8HChvklw" />
+    <meta name="description" content="Dipankar Adhikary — Full-stack developer (.NET Core, Angular, SQL Server) at PwC India. Enterprise EdTech, fleet operations and assurance tooling delivery." />
+    <meta name="theme-color" content="#ffffff" />
 
-    <title>Dipankar Adhikary - Full Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dipankar Adhikary — Full-stack Developer · PwC India</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+        :root {
+            --da-bg: #ffffff;
+            --da-bg-soft: #f7f8fb;
+            --da-ink: #0f172a;
+            --da-ink-soft: #334155;
+            --da-muted: #64748b;
+            --da-line: #e5e7eb;
+            --da-line-strong: #cbd5e1;
+            --da-card: #ffffff;
+            --da-card-soft: #fafbfd;
+            --da-accent: #6366f1;
+            --da-accent-2: #8b5cf6;
+            --da-accent-3: #ec4899;
+            --da-cyan: #06b6d4;
+            --da-emerald: #10b981;
+            --da-amber: #f59e0b;
+            --da-rose: #f43f5e;
+            --da-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
+            --da-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.12), 0 4px 10px -4px rgba(15, 23, 42, 0.06);
+            --da-shadow-lg: 0 30px 60px -20px rgba(79, 70, 229, 0.18), 0 18px 36px -18px rgba(15, 23, 42, 0.18);
+            scroll-padding-top: 92px;
         }
-        
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, "Segoe UI", sans-serif;
+            background-color: var(--da-bg);
+            color: var(--da-ink);
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        ::selection { background: rgba(99, 102, 241, 0.18); color: var(--da-ink); }
+
+        .font-mono-ui { font-family: 'JetBrains Mono', monospace; }
+        .font-display { font-family: 'Instrument Serif', 'Plus Jakarta Sans', serif; font-style: italic; font-weight: 400; }
+
+        /* ─── Animated white background ─── */
+        .bg-stage {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #fafbff 50%, #f7f8fb 100%);
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.55;
+            mix-blend-mode: multiply;
+        }
+
+        .bg-orb.o-1 { width: 520px; height: 520px; left: -120px; top: -160px; background: radial-gradient(circle at 30% 30%, #c7d2fe, transparent 70%); animation: orb-drift-1 28s ease-in-out infinite alternate; }
+        .bg-orb.o-2 { width: 460px; height: 460px; right: -120px; top: 12%; background: radial-gradient(circle at 60% 40%, #fbcfe8, transparent 70%); animation: orb-drift-2 32s ease-in-out infinite alternate; }
+        .bg-orb.o-3 { width: 580px; height: 580px; left: 22%; top: 56%; background: radial-gradient(circle at 50% 50%, #bae6fd, transparent 70%); animation: orb-drift-3 36s ease-in-out infinite alternate; }
+        .bg-orb.o-4 { width: 380px; height: 380px; right: 8%; bottom: -120px; background: radial-gradient(circle at 50% 50%, #ddd6fe, transparent 72%); animation: orb-drift-1 40s ease-in-out -8s infinite alternate; }
+
+        @keyframes orb-drift-1 { from { transform: translate(0, 0) scale(1); } to { transform: translate(60px, 80px) scale(1.08); } }
+        @keyframes orb-drift-2 { from { transform: translate(0, 0) scale(1); } to { transform: translate(-80px, 60px) scale(1.05); } }
+        @keyframes orb-drift-3 { from { transform: translate(0, 0) scale(1); } to { transform: translate(40px, -60px) scale(1.1); } }
+
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse 90% 75% at 50% 30%, black 18%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 30%, black 18%, transparent 80%);
+            opacity: 0.65;
+            animation: grid-drift 60s linear infinite;
+        }
+
+        @keyframes grid-drift { to { background-position: 56px 56px, -56px 56px; } }
+
+        .bg-noise {
+            position: absolute;
+            inset: 0;
+            opacity: 0.35;
+            mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+        }
+
+        .bg-shimmer {
+            position: absolute;
+            inset: -10%;
+            background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.85) 50%, transparent 60%);
+            animation: shimmer-sweep 18s ease-in-out infinite;
+        }
+
+        @keyframes shimmer-sweep {
+            0%, 100% { transform: translateX(-25%); opacity: 0; }
+            50% { transform: translateX(25%); opacity: 0.85; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .bg-orb, .bg-grid, .bg-shimmer { animation: none !important; }
+        }
+
+        main, nav, footer { position: relative; z-index: 2; }
+
+        /* ─── Top progress bar ─── */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--da-accent) 0%, var(--da-accent-2) 50%, var(--da-accent-3) 100%);
+            z-index: 1080;
+            transition: width 0.05s linear;
+        }
+
+        /* ─── Navbar ─── */
+        .navbar-da {
+            background: rgba(255, 255, 255, 0.78) !important;
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
+            border-bottom: 1px solid var(--da-line);
+        }
+        .navbar-da .nav-link {
+            color: var(--da-ink-soft) !important;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0.75rem;
+        }
+        .navbar-da .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 12px; right: 12px; bottom: 0.25rem;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--da-accent), var(--da-accent-3));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s ease;
+        }
+        .navbar-da .nav-link:hover { color: var(--da-ink) !important; }
+        .navbar-da .nav-link.active::after,
+        .navbar-da .nav-link:hover::after { transform: scaleX(1); }
+        .navbar-da .nav-cta { background: var(--da-ink); color: #fff !important; border-radius: 999px; padding: 0.4rem 1rem !important; }
+        .navbar-da .nav-cta::after { display: none; }
+        .navbar-da .nav-cta:hover { background: var(--da-accent); color: #fff !important; }
+
+        .brand-mark {
+            width: 34px; height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--da-accent), var(--da-accent-3));
+            color: #fff;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-weight: 800;
+            box-shadow: 0 6px 18px -6px rgba(99, 102, 241, 0.5);
+        }
+
+        /* ─── Typography ─── */
+        h1, h2, h3, h4 { color: var(--da-ink); letter-spacing: -0.02em; }
+        h1 { font-weight: 800; }
+        h2 { font-weight: 700; }
+        .text-muted-ink { color: var(--da-muted); }
+        .text-soft-ink { color: var(--da-ink-soft); }
+
         .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(120deg, var(--da-accent) 0%, var(--da-accent-2) 50%, var(--da-accent-3) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
-        .hero-blur {
-            backdrop-filter: blur(10px);
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--da-accent);
+            background: rgba(99, 102, 241, 0.08);
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+        .section-pad { padding: 6rem 0; }
+        @media (max-width: 767.98px) { .section-pad { padding: 4rem 0; } }
+
+        .section-divider {
+            width: 60px; height: 3px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--da-accent), var(--da-accent-3));
         }
-        
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
+
+        /* ─── Buttons ─── */
+        .btn-ink {
+            background: var(--da-ink);
+            color: #fff;
+            border: none;
+            font-weight: 600;
         }
-        
-        .project-card {
+        .btn-ink:hover { background: var(--da-accent); color: #fff; transform: translateY(-1px); }
+
+        .btn-gradient {
+            background: linear-gradient(120deg, var(--da-accent), var(--da-accent-2), var(--da-accent-3));
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 12px 28px -10px rgba(139, 92, 246, 0.45);
+        }
+        .btn-gradient:hover { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 16px 36px -10px rgba(236, 72, 153, 0.45); }
+
+        .btn-soft {
+            background: var(--da-bg-soft);
+            color: var(--da-ink);
+            border: 1px solid var(--da-line);
+            font-weight: 500;
+        }
+        .btn-soft:hover { background: #fff; border-color: var(--da-line-strong); color: var(--da-ink); }
+
+        /* ─── Cards ─── */
+        .card-da {
+            background: var(--da-card);
+            border: 1px solid var(--da-line);
+            border-radius: 1.25rem;
+            box-shadow: var(--da-shadow-sm);
+            transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s;
+        }
+        .card-da:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: var(--da-shadow);
+        }
+
+        .card-soft {
+            background: var(--da-card-soft);
+            border: 1px solid var(--da-line);
+            border-radius: 1.25rem;
+        }
+
+        .icon-tile {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 1.15rem;
+        }
+        .icon-tile.t-indigo { background: rgba(99, 102, 241, 0.1); color: var(--da-accent); }
+        .icon-tile.t-violet { background: rgba(139, 92, 246, 0.1); color: var(--da-accent-2); }
+        .icon-tile.t-pink { background: rgba(236, 72, 153, 0.1); color: var(--da-accent-3); }
+        .icon-tile.t-cyan { background: rgba(6, 182, 212, 0.1); color: var(--da-cyan); }
+        .icon-tile.t-emerald { background: rgba(16, 185, 129, 0.1); color: var(--da-emerald); }
+        .icon-tile.t-amber { background: rgba(245, 158, 11, 0.1); color: var(--da-amber); }
+        .icon-tile.t-rose { background: rgba(244, 63, 94, 0.1); color: var(--da-rose); }
+        .icon-tile.t-slate { background: rgba(15, 23, 42, 0.06); color: var(--da-ink); }
+
+        .pill {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            background: var(--da-bg-soft);
+            border: 1px solid var(--da-line);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--da-ink-soft);
+        }
+
+        .pill-status-live { background: rgba(16, 185, 129, 0.08); color: var(--da-emerald); border-color: rgba(16, 185, 129, 0.2); }
+        .pill-status-confidential { background: rgba(245, 158, 11, 0.08); color: #b45309; border-color: rgba(245, 158, 11, 0.25); }
+        .pill-status-oss { background: rgba(15, 23, 42, 0.05); color: var(--da-ink); border-color: var(--da-line-strong); }
+
+        /* Skill chips → projects */
+        .chip {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid var(--da-line);
+            background: #fff;
+            color: var(--da-ink-soft);
+            transition: all 0.2s ease;
+        }
+        .chip:hover { transform: translateY(-2px); border-color: var(--da-accent); color: var(--da-accent); box-shadow: 0 8px 18px -8px rgba(99, 102, 241, 0.4); }
+        .chip i { font-size: 0.95rem; }
+
+        /* ─── Hero ─── */
+        .hero-pad { padding-top: 9rem; padding-bottom: 4rem; }
+        @media (max-width: 991.98px) { .hero-pad { padding-top: 8rem; padding-bottom: 3rem; } }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.85rem;
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--da-ink-soft);
+            box-shadow: var(--da-shadow-sm);
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--da-emerald);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+            animation: pulse-dot 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18); }
+            50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.05); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -0.035em;
+        }
+
+        .hero-portrait-wrap {
+            position: relative;
+            display: inline-block;
+        }
+        .hero-portrait-wrap::before {
+            content: "";
+            position: absolute;
+            inset: -16px;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg at 50% 50%, var(--da-accent), var(--da-accent-3), var(--da-accent-2), var(--da-accent));
+            filter: blur(20px);
+            opacity: 0.45;
+            z-index: 0;
+            animation: portrait-spin 18s linear infinite;
+        }
+        @keyframes portrait-spin { to { transform: rotate(360deg); } }
+        .hero-portrait {
+            position: relative;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 30px 60px -20px rgba(99, 102, 241, 0.3), 0 0 0 1px var(--da-line);
+            object-fit: cover;
+            background: linear-gradient(135deg, #eef2ff, #fce7f3);
+            display: block;
+            z-index: 1;
+        }
+        .hero-portrait-fallback {
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Instrument Serif', serif;
+            font-size: 6rem;
+            color: var(--da-accent);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 14px;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--da-ink-soft);
+            box-shadow: var(--da-shadow);
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .floating-card.fc-1 { top: 8%; left: -10%; animation: float-y 5s ease-in-out infinite; }
+        .floating-card.fc-2 { bottom: 14%; right: -12%; animation: float-y 6s ease-in-out 1s infinite; }
+        .floating-card.fc-3 { bottom: -6%; left: 12%; animation: float-y 7s ease-in-out 2s infinite; }
+        @keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        .stat-tile {
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 1rem;
+            padding: 1.1rem 1.25rem;
+            text-align: left;
             transition: all 0.3s ease;
-            perspective: 1000px;
         }
-        
-        .project-card:hover .project-content {
-            transform: rotateY(10deg);
-        }
-        
-        .typewriter {
+        .stat-tile:hover { border-color: var(--da-accent); box-shadow: var(--da-shadow); }
+        .stat-tile .stat-num { font-size: 1.85rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+        .stat-tile .stat-label { font-size: 0.78rem; color: var(--da-muted); margin-top: 0.4rem; font-weight: 500; }
+
+        /* ─── Marquee ─── */
+        .marquee {
+            display: flex;
             overflow: hidden;
-            border-right: 3px solid #6a9ae9;
+            position: relative;
+            mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            gap: 3rem;
+            animation: marquee-scroll 32s linear infinite;
             white-space: nowrap;
-            animation: typing 4.5s steps(50, end), blink-caret .95s step-end infinite;
+            padding-right: 3rem;
         }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+        @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .marquee-item {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--da-ink-soft);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #1d88be }
+        .marquee-item i { color: var(--da-accent); }
+
+        /* ─── Stack section ─── */
+        .stack-card {
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .stack-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.08), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .stack-card:hover::before { opacity: 1; }
+        .stack-card:hover { transform: translateY(-4px); border-color: rgba(99, 102, 241, 0.3); box-shadow: var(--da-shadow); }
+        .stack-card > * { position: relative; z-index: 1; }
+
+        /* ─── Timeline ─── */
+        .tl-shell { position: relative; max-width: 920px; margin: 0 auto; }
+        .tl-shell::before {
+            content: "";
+            position: absolute;
+            left: 30px; top: 6px; bottom: 6px;
+            width: 2px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, var(--da-accent), var(--da-accent-2), var(--da-accent-3));
+            opacity: 0.3;
+        }
+        @media (max-width: 575.98px) { .tl-shell::before { left: 18px; } }
+
+        .tl-row { position: relative; padding-left: 5.5rem; padding-bottom: 2.5rem; opacity: 0; }
+        @media (max-width: 575.98px) { .tl-row { padding-left: 3.5rem; } }
+        .tl-row:last-child { padding-bottom: 0; }
+
+        .tl-dot {
+            position: absolute;
+            left: 18px; top: 4px;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--da-accent);
+            box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.08);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--da-accent);
+            font-size: 0.75rem;
+        }
+        @media (max-width: 575.98px) { .tl-dot { left: 6px; width: 22px; height: 22px; } }
+        .tl-dot.dot-school { border-color: var(--da-cyan); color: var(--da-cyan); box-shadow: 0 0 0 6px rgba(6, 182, 212, 0.08); }
+        .tl-dot.dot-job { border-color: var(--da-accent-2); color: var(--da-accent-2); box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.08); }
+        .tl-dot.dot-scope { border-color: var(--da-emerald); color: var(--da-emerald); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); }
+        .tl-dot.dot-cert { border-color: var(--da-amber); color: var(--da-amber); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.08); }
+        .tl-dot.dot-now { border-color: var(--da-rose); color: var(--da-rose); box-shadow: 0 0 0 6px rgba(244, 63, 94, 0.08); }
+
+        .tl-date {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--da-muted);
+            margin-bottom: 0.6rem;
+        }
+        .tl-card {
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 1rem;
+            padding: 1.25rem 1.5rem;
+            box-shadow: var(--da-shadow-sm);
         }
 
-        /* Mobile Menu Transitions */
-        .mobile-menu-enter { opacity: 0; transform: translateY(-10px) scale(0.95); pointer-events: none; }
-        .mobile-menu-active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+        /* ─── Skill bars ─── */
+        .skill-row { margin-bottom: 1.1rem; }
+        .skill-row:last-child { margin-bottom: 0; }
+        .skill-track {
+            background: var(--da-bg-soft);
+            border-radius: 99px;
+            height: 8px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--da-accent), var(--da-accent-3));
+            width: 0;
+            transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        /* Like Button CSS */
-        .heart-container { --heart-color: rgb(147, 58, 235); position: relative; width: 50px; height: 50px; transition: .3s; }
-        .heart-container .checkbox { position: absolute; width: 100%; height: 100%; opacity: 0; z-index: 20; cursor: pointer; }
-        .heart-container .svg-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
-        .heart-container .svg-outline, .heart-container .svg-filled { fill: var(--heart-color); position: absolute; }
-        .heart-container .svg-filled { animation: keyframes-svg-filled 1s; display: none; }
-        .heart-container .svg-celebrate { position: absolute; animation: keyframes-svg-celebrate .5s; animation-fill-mode: forwards; display: none; stroke: var(--heart-color); fill: var(--heart-color); stroke-width: 2px; }
-        .heart-container .checkbox:checked~.svg-container .svg-filled { display: block }
-        .heart-container .checkbox:checked~.svg-container .svg-celebrate { display: block }
-        
-        @keyframes keyframes-svg-filled { 0% { transform: scale(0); } 25% { transform: scale(1.2); } 50% { transform: scale(1); filter: brightness(1.5); } }
-        @keyframes keyframes-svg-celebrate { 0% { transform: scale(0); } 50% { opacity: 1; filter: brightness(1.5); } 100% { transform: scale(1.4); opacity: 0; display: none; } }
+        /* ─── Project cards ─── */
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 1.25rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.35s ease;
+            position: relative;
+        }
+        .project-card:hover { transform: translateY(-6px); border-color: rgba(99, 102, 241, 0.3); box-shadow: var(--da-shadow-lg); }
+        .project-cover {
+            height: 8px;
+            background: linear-gradient(90deg, var(--da-accent), var(--da-accent-3));
+        }
+        .project-card.flag-confidential .project-cover { background: linear-gradient(90deg, var(--da-amber), #fb923c); }
+        .project-card.flag-oss .project-cover { background: linear-gradient(90deg, var(--da-ink), #475569); }
+        .project-card.flag-recent .project-cover { background: linear-gradient(90deg, var(--da-emerald), var(--da-cyan)); }
+        .project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .project-title { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.015em; }
+        .project-blurb { font-size: 0.88rem; color: var(--da-ink-soft); line-height: 1.55; }
+
+        .anchor-target { scroll-margin-top: 96px; }
+        .project-card:target,
+        .project-card:has(:target) { box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18), var(--da-shadow); }
+
+        /* ─── Demo cards ─── */
+        .demo-card { background: #fff; border: 1px solid var(--da-line); border-radius: 1rem; padding: 1.25rem; height: 100%; transition: all 0.3s ease; }
+        .demo-card:hover { border-color: rgba(99, 102, 241, 0.3); transform: translateY(-3px); box-shadow: var(--da-shadow); }
+
+        /* ─── Values strip ─── */
+        .value-card {
+            background: #fff;
+            border: 1px solid var(--da-line);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .value-card:hover { transform: translateY(-3px); border-color: rgba(99, 102, 241, 0.3); }
+
+        /* ─── Contact ─── */
+        .contact-shell {
+            background: linear-gradient(135deg, #f5f3ff 0%, #fdf2f8 100%);
+            border: 1px solid var(--da-line);
+            border-radius: 2rem;
+            padding: 3rem;
+        }
+        @media (max-width: 767.98px) { .contact-shell { padding: 2rem; border-radius: 1.5rem; } }
+
+        /* ─── Footer ─── */
+        footer {
+            background: var(--da-ink);
+            color: #cbd5e1;
+            padding: 3rem 0 2rem;
+        }
+        footer a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: #fff; }
+        .footer-icon {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #cbd5e1;
+            transition: all 0.2s;
+        }
+        .footer-icon:hover { background: rgba(255, 255, 255, 0.1); color: #fff; transform: translateY(-2px); }
+
+        /* ─── Reveal ─── */
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ─── FAB ─── */
+        .fab-top {
+            position: fixed;
+            bottom: 1.5rem; right: 1.5rem;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: var(--da-ink);
+            color: #fff;
+            border: none;
+            display: inline-flex; align-items: center; justify-content: center;
+            box-shadow: var(--da-shadow);
+            z-index: 1050;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.25s, transform 0.25s, background 0.2s;
+        }
+        .fab-top.show { opacity: 1; transform: translateY(0); }
+        .fab-top:hover { background: var(--da-accent); }
+
+        /* ─── Misc ─── */
+        a.subtle-link { color: var(--da-ink-soft); text-decoration: none; border-bottom: 1px dashed var(--da-line-strong); transition: color 0.2s, border-color 0.2s; }
+        a.subtle-link:hover { color: var(--da-accent); border-color: var(--da-accent); }
+
+        .badge-soft {
+            background: var(--da-bg-soft);
+            color: var(--da-ink-soft);
+            border: 1px solid var(--da-line);
+            font-weight: 500;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 relative">
-                <div class="flex items-center">
-                    <a href="#home" class="text-xl font-bold gradient-text">Dipankar Adhikary</a>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">About</a>
-                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition font-medium">Experience</a>
-                    <a href="#demos" class="text-gray-700 hover:text-blue-600 transition font-medium">Live Demos</a>
-                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projects</a>
-                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition font-medium">Skills</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
-                </div>
+<body>
 
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition">
-                        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Animated white background -->
+    <div class="bg-stage" aria-hidden="true">
+        <span class="bg-orb o-1"></span>
+        <span class="bg-orb o-2"></span>
+        <span class="bg-orb o-3"></span>
+        <span class="bg-orb o-4"></span>
+        <div class="bg-grid"></div>
+        <div class="bg-noise"></div>
+        <div class="bg-shimmer"></div>
+    </div>
+
+    <!-- ─── Nav ─── -->
+    <nav class="navbar navbar-expand-lg navbar-da fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#home">
+                <span class="brand-mark">DA</span>
+                <span class="d-none d-sm-inline" style="color: var(--da-ink);">Dipankar Adhikary</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-3" style="color: var(--da-ink);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto align-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#timeline">Journey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demos">Live</a></li>
+                    <li class="nav-item ms-lg-2"><a class="nav-link nav-cta" href="#contact"><i class="bi bi-send me-1"></i>Get in touch</a></li>
+                </ul>
             </div>
-        </div>
-
-        <div id="mobile-menu" class="mobile-menu-enter absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 flex flex-col space-y-2 md:hidden z-50 transition-all duration-300">
-            <a href="#home" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Home</a>
-            <a href="#about" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">About</a>
-            <a href="#demos" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Live Demos</a>
-            <a href="#projects" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Projects</a>
-            <a href="#skills" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">Skills</a>
-            <a href="#contact" class="block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium text-center bg-blue-600 !text-white mt-2">Hire Me</a>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-14 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center w-full">
-            
-            <div class="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
-                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                    Hello, I'm <span class="gradient-text">Dipankar Adhikary</span>
-                </h1>
-                <div class="typewriter mb-6 w-full">
-                    <h2 class="text-xl sm:text-1xl md:text-2xl text-gray-600 font-medium">
-                        Full-Stack Developer | Tech Consultant
-                    </h2>
-                </div>
-                <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-lg">
-                    Tech Consultant at PwC India. I architect scalable enterprise solutions with .NET and Angular, and build intelligent workflows through AI integration.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
-                    <button onclick="window.location.href='#contact'" class="bg-white w-full sm:w-48 rounded-2xl h-14 relative text-black text-lg font-semibold group transition flex items-center justify-center shadow-sm hover:shadow-md" type="button">
-                        <div class="bg-blue-500 rounded-xl h-12 w-12 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"></div>
-                        <span class="relative z-20 flex items-center gap-2 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-paper-plane"></i> Let's Talk
-                        </span>
-                    </button>
-                    <button onclick="window.location.href='#demos'" class="bg-gray-900 text-white w-full sm:w-48 rounded-2xl h-14 text-lg font-semibold transition hover:bg-gray-800 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
-                        <i class="fas fa-play-circle text-blue-400"></i> Live Demos
-                    </button>
-                </div>
-                <div class="flex space-x-6 mt-8 justify-center md:justify-start w-full">
-                    <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="text-blue-600 hover:scale-125 duration-200 transition" title="LinkedIn">
-                        <i class="fab fa-linkedin text-3xl"></i>
-                    </a>
-                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="text-gray-800 hover:scale-125 duration-200 transition" title="GitHub">
-                        <i class="fab fa-github text-3xl"></i>
-                    </a>
-                    <a href="mailto:d.adhikary.ai@gmail.com" class="text-red-500 hover:scale-125 duration-200 transition" title="Email">
-                        <i class="fas fa-envelope text-3xl"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
-                <div class="relative flex justify-center">
-                    <div class="w-56 h-56 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white">
-                        <img src="./sscProfile.png" class="w-full h-full object-cover rounded-full p-4">
-                    </div>
-                    <div class="absolute -bottom-5 right-1/2 translate-x-1/2 md:translate-x-0 md:right-0 bg-white p-4 rounded-xl shadow-xl hero-blur min-w-[120px] border border-gray-100">
-                        <div class="text-center animate-pulse">
-                            <p class="font-bold text-blue-600 text-lg">PwC India</p>
-                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wider mt-1">Tech Consultant</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
 
-            
-    <section id="demos" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Live <span class="gradient-text">Deployments & Demos</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-                <p class="text-gray-500 max-w-2xl mx-auto">A curated collection of my live projects, ranging from AI microservices to full-scale e-commerce templates.</p>
+        <!-- ─── Hero ─── -->
+        <section id="home" class="hero-pad anchor-target">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <div class="reveal">
+                            <span class="hero-badge mb-4">
+                                <span class="dot"></span>
+                                Open to senior full-stack &amp; consulting roles
+                            </span>
+                        </div>
+                        <h1 class="hero-title reveal mb-4">
+                            Engineering <span class="gradient-text">enterprise software</span> that ships on time, every sprint.
+                        </h1>
+                        <p class="reveal fs-5 text-soft-ink mb-3" style="max-width: 640px;">
+                            I'm <strong>Dipankar Adhikary</strong> — a full-stack developer at <strong>PwC India</strong> building Angular &amp; .NET Core systems for EdTech platforms used by 50+ campuses, fleet operations, and audit assurance tooling.
+                        </p>
+                        <p class="reveal text-muted-ink mb-4" style="max-width: 640px;">
+                            <i class="bi bi-mortarboard-fill me-1" style="color: var(--da-accent);"></i>
+                            B.Tech Chemical Engineering · Minor in Computer Applications · NIT Tiruchirappalli (2019–2023)
+                        </p>
+
+                        <div class="reveal d-flex flex-wrap gap-2 mb-4">
+                            <span class="pill"><i class="fab fa-angular" style="color:#dd0031;"></i> Angular 14+</span>
+                            <span class="pill"><i class="fab fa-microsoft" style="color:#00a4ef;"></i> .NET Core</span>
+                            <span class="pill"><i class="bi bi-database-fill" style="color:#0078d4;"></i> SQL Server</span>
+                            <span class="pill"><i class="bi bi-cloud-arrow-up-fill" style="color:#0078d4;"></i> Azure DevOps</span>
+                            <span class="pill"><i class="fab fa-envira" style="color:#13aa52;"></i> MongoDB</span>
+                        </div>
+
+                        <div class="reveal d-flex flex-wrap gap-3">
+                            <a href="#cv" class="btn btn-gradient rounded-pill px-4 py-2"><i class="bi bi-arrow-down-circle me-2"></i>Download CV</a>
+                            <a href="#projects" class="btn btn-ink rounded-pill px-4 py-2"><i class="bi bi-collection me-2"></i>See projects</a>
+                            <a href="#contact" class="btn btn-soft rounded-pill px-4 py-2"><i class="bi bi-envelope me-2"></i>Contact</a>
+                        </div>
+
+                        <div class="reveal d-flex flex-wrap gap-3 mt-4 small">
+                            <a class="subtle-link" href="mailto:d.adhikary.ai@gmail.com"><i class="bi bi-envelope me-1"></i>d.adhikary.ai@gmail.com</a>
+                            <a class="subtle-link" href="https://linkedin.com/in/dipankar-adhikary" target="_blank" rel="noopener"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+                            <a class="subtle-link" href="https://github.com/adhikary-dipankar" target="_blank" rel="noopener"><i class="bi bi-github me-1"></i>GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 text-center">
+                        <div class="reveal hero-portrait-wrap">
+                            <img src="./Profile_1.png" alt="Dipankar Adhikary" class="hero-portrait" onerror="this.outerHTML='<div class=&quot;hero-portrait hero-portrait-fallback&quot;>D</div>';" />
+                            <div class="floating-card fc-1"><i class="bi bi-building text-primary"></i> PwC India</div>
+                            <div class="floating-card fc-2"><i class="bi bi-rocket-takeoff" style="color: var(--da-accent-3);"></i> 15+ live apps</div>
+                            <div class="floating-card fc-3"><i class="bi bi-graph-up-arrow" style="color: var(--da-emerald);"></i> 98% on-time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats row -->
+                <div class="row g-3 mt-5 reveal">
+                    <div class="col-6 col-md-3"><div class="stat-tile"><div class="stat-num gradient-text">2.5+</div><div class="stat-label">Years at PwC India</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-tile"><div class="stat-num gradient-text">50+</div><div class="stat-label">Campuses served</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-tile"><div class="stat-num gradient-text">15+</div><div class="stat-label">Live applications</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-tile"><div class="stat-num gradient-text">10k+</div><div class="stat-label">Tx / month gateway</div></div></div>
+                </div>
             </div>
-    
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="bg-gradient-to-br from-indigo-50 to-blue-100 p-6 rounded-3xl border border-indigo-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-lg">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3 class="font-bold text-xl text-indigo-900">Portfolios</h3>
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
-                            <span class="text-indigo-800 font-medium">Main Portfolio</span>
-                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
-                        </a>
-                        <a href="https://dipankar-adhikary.lovable.app/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
-                            <span class="text-indigo-800 font-medium">Advanced Template</span>
-                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
-                            <span class="text-indigo-800 font-medium">Business Module</span>
-                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
-                        </a>
-                     <a href="https://adhikary-dipankar.github.io/mittika-herbal/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-indigo-100">
-                            <span class="text-indigo-800 font-medium">Mittika Herbal Module</span>
-                            <i class="fas fa-external-link-alt text-indigo-400 group-hover:text-indigo-600 text-sm"></i>
-                        </a>
+        </section>
+
+        <!-- ─── Marquee strip ─── -->
+        <section class="py-4 border-top border-bottom" style="border-color: var(--da-line) !important; background: rgba(255, 255, 255, 0.5);">
+            <div class="container-fluid px-0">
+                <div class="marquee">
+                    <div class="marquee-track">
+                        <span class="marquee-item"><i class="fab fa-angular"></i> Angular 14+</span>
+                        <span class="marquee-item"><i class="fab fa-microsoft"></i> .NET Core / Web API</span>
+                        <span class="marquee-item"><i class="bi bi-database"></i> SQL Server</span>
+                        <span class="marquee-item"><i class="fab fa-envira"></i> MongoDB</span>
+                        <span class="marquee-item"><i class="bi bi-cloud-arrow-up"></i> Azure DevOps</span>
+                        <span class="marquee-item"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="marquee-item"><i class="bi bi-shield-check"></i> Audit Assurance</span>
+                        <span class="marquee-item"><i class="bi bi-truck"></i> Fleet Operations</span>
+                        <span class="marquee-item"><i class="bi bi-mortarboard"></i> EdTech at scale</span>
+                        <span class="marquee-item"><i class="fab fa-angular"></i> Angular 14+</span>
+                        <span class="marquee-item"><i class="fab fa-microsoft"></i> .NET Core / Web API</span>
+                        <span class="marquee-item"><i class="bi bi-database"></i> SQL Server</span>
+                        <span class="marquee-item"><i class="fab fa-envira"></i> MongoDB</span>
+                        <span class="marquee-item"><i class="bi bi-cloud-arrow-up"></i> Azure DevOps</span>
+                        <span class="marquee-item"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="marquee-item"><i class="bi bi-shield-check"></i> Audit Assurance</span>
+                        <span class="marquee-item"><i class="bi bi-truck"></i> Fleet Operations</span>
+                        <span class="marquee-item"><i class="bi bi-mortarboard"></i> EdTech at scale</span>
                     </div>
                 </div>
-    
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-3xl border border-blue-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-lg">
-                            <i class="fas fa-shopping-bag"></i>
+            </div>
+        </section>
+
+        <!-- ─── About ─── -->
+        <section id="about" class="section-pad anchor-target">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+                    <div class="col-lg-5">
+                        <div class="reveal">
+                            <span class="eyebrow"><i class="bi bi-person-vcard"></i> About me</span>
+                            <h2 class="display-6 fw-bold mt-3 mb-3">A pragmatic engineer who treats <span class="gradient-text">delivery as the feature</span>.</h2>
+                            <div class="section-divider mb-4"></div>
+                            <p class="text-soft-ink fs-5 lh-base">I work where business outcomes meet code: enterprise EdTech, fleet ops, and audit assurance — domains that punish vague specs and reward steady, observable releases.</p>
+                            <p class="text-muted-ink">Started from a Chemical Engineering degree at NIT Tiruchirappalli with a Computer Applications minor. Moved into full-stack delivery at PwC India and have shipped Angular front-ends, .NET Core APIs, and SQL Server-backed reporting layers across 50+ institutions.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge-soft"><i class="bi bi-geo-alt me-1"></i>Kolkata · India</span>
+                                <span class="badge-soft"><i class="bi bi-translate me-1"></i>English · Hindi · Bengali</span>
+                                <span class="badge-soft"><i class="bi bi-clock-history me-1"></i>Available immediately</span>
+                            </div>
                         </div>
-                        <h3 class="font-bold text-xl text-blue-900">E-Commerce</h3>
                     </div>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
-                            <span class="text-blue-800 font-medium">E-Commerce v1</span>
-                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/E-Commerce-2/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
-                            <span class="text-blue-800 font-medium">E-Commerce v2</span>
-                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
-                        </a>
-                         <a href="https://adhikary-dipankar.github.io/E-Shop-1/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
-                            <span class="text-blue-800 font-medium"> Furniture Shop</span>
-                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
-                        </a>
-                        <a href="https://v0-fertilizer-shop-g1g7f28bv-idiomscode-7207s-projects.vercel.app" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-blue-100">
-                            <span class="text-blue-800 font-medium">Fertilizer Shop App</span>
-                            <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-sm"></i>
-                        </a>
-                        
+                    <div class="col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-md-6 reveal">
+                                <div class="card-da p-4 h-100">
+                                    <div class="icon-tile t-indigo mb-3"><i class="bi bi-bullseye"></i></div>
+                                    <h3 class="h6 fw-bold mb-2">What I optimise for</h3>
+                                    <p class="small text-muted-ink mb-0">Predictable releases over heroics, typed APIs over loose contracts, and dashboards that surface the next decision instead of last week's noise.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal">
+                                <div class="card-da p-4 h-100">
+                                    <div class="icon-tile t-pink mb-3"><i class="bi bi-people"></i></div>
+                                    <h3 class="h6 fw-bold mb-2">How I work with teams</h3>
+                                    <p class="small text-muted-ink mb-0">Lead with smallest demoable slice, write the migration first, document the trade-off in the PR. 100+ sprint touchpoints with a 98% on-time delivery record.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal">
+                                <div class="card-da p-4 h-100">
+                                    <div class="icon-tile t-emerald mb-3"><i class="bi bi-shield-check"></i></div>
+                                    <h3 class="h6 fw-bold mb-2">Where I add the most value</h3>
+                                    <p class="small text-muted-ink mb-0">Refactoring SQL hotspots (~40% faster reads), wiring CI/CD that actually deploys (~35% faster cycles), and turning specs into shippable Angular modules.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal">
+                                <div class="card-da p-4 h-100">
+                                    <div class="icon-tile t-amber mb-3"><i class="bi bi-stars"></i></div>
+                                    <h3 class="h6 fw-bold mb-2">Currently exploring</h3>
+                                    <p class="small text-muted-ink mb-0">AI assistants integrated into operational workflows — paired with .NET Core gateways and Angular review surfaces. Practical glue, not demo-ware.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-100 p-6 rounded-3xl border border-emerald-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-emerald-600 text-white p-2.5 rounded-xl shadow-lg">
-                            <i class="fas fa-microchip"></i>
+            </div>
+        </section>
+
+        <!-- ─── CV download band ─── -->
+        <section id="cv" class="anchor-target" style="padding: 2rem 0; background: linear-gradient(135deg, #fafbff 0%, #fdf4ff 100%); border-top: 1px solid var(--da-line); border-bottom: 1px solid var(--da-line);">
+            <div class="container">
+                <div class="row align-items-center g-3 reveal">
+                    <div class="col-lg-7">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-tile t-violet" style="width: 52px; height: 52px;"><i class="bi bi-file-earmark-person fs-4"></i></div>
+                            <div>
+                                <h2 class="h5 fw-bold mb-1">CV in PDF and Word</h2>
+                            </div>
                         </div>
-                        <h3 class="font-bold text-xl text-emerald-900">AI & Utilities</h3>
                     </div>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://aiassistantapi.onrender.com/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
-                            <span class="text-emerald-800 font-medium">AI Assistance API</span>
-                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/sip-calc/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
-                            <span class="text-emerald-800 font-medium">SIP Calculator</span>
-                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/zen-gchat/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
-                            <span class="text-emerald-800 font-medium">Zen Zone Chat</span>
-                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
-                        </a>
-                         <a href="https://adhikary-dipankar.github.io/hindustan-mould-tech/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-emerald-100">
-                            <span class="text-emerald-800 font-medium">Business Zone</span>
-                            <i class="fas fa-external-link-alt text-emerald-400 group-hover:text-emerald-600 text-sm"></i>
-                        </a>
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                            <a href="DIPANKAR ADHIKARY.pdf" class="btn btn-gradient rounded-pill px-4" download><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF</a>
+                            <a href="DIPANKAR ADHIKARY.docx" class="btn btn-soft rounded-pill px-4" download><i class="bi bi-file-earmark-word me-2"></i>Docs</a>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="bg-gradient-to-br from-purple-50 to-fuchsia-100 p-6 rounded-3xl border border-purple-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-purple-600 text-white p-2.5 rounded-xl shadow-lg">
-                            <i class="fas fa-graduation-cap"></i>
+            </div>
+        </section>
+
+        <!-- ─── Stack ─── -->
+        <section id="stack" class="section-pad anchor-target">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-diagram-3"></i> Architecture</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">A <span class="gradient-text">full-stack toolkit</span>, calibrated for enterprise delivery.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">Modular Angular front-ends, typed .NET Core APIs, resilient relational data, and Azure pipelines that move work to production every sprint.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-indigo mb-3"><i class="bi bi-window-stack"></i></div>
+                            <h3 class="h6 fw-bold mb-2">Experience layer</h3>
+                            <p class="small text-muted-ink mb-3">Angular 14+ SPAs, TypeScript, RxJS, reactive forms, role-aware UI. Bootstrap &amp; Tailwind systems for fast theming.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">Angular</span><span class="badge-soft">TypeScript</span><span class="badge-soft">RxJS</span><span class="badge-soft">Bootstrap</span>
+                            </div>
                         </div>
-                        <h3 class="font-bold text-xl text-purple-900">EdTech</h3>
                     </div>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://adhikary-dipankar.github.io/rbi-grade-b-resources/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
-                            <span class="text-purple-800 font-medium">RBI Grade-B Prep</span>
-                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
-                        </a>
-                        <a href="https://github.com/adhikary-dipankar/adhikary-dipankar/edit/main/EduTrack.md" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
-                            <span class="text-purple-800 font-medium">Edu Track Demo</span>
-                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
-                        </a>
-                        <a href="https://nexus-p1obbue13-idiomscode-7207s-projects.vercel.app" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-purple-100">
-                            <span class="text-purple-800 font-medium">Art Nexus (Ind)</span>
-                            <i class="fas fa-external-link-alt text-purple-400 group-hover:text-purple-600 text-sm"></i>
-                        </a>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-violet mb-3"><i class="bi bi-hdd-stack"></i></div>
+                            <h3 class="h6 fw-bold mb-2">Application &amp; API</h3>
+                            <p class="small text-muted-ink mb-3">.NET Core, Web API, MVC, C#, Node.js. Auth, validation, integration patterns, microservice-aware composition.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">.NET Core</span><span class="badge-soft">C#</span><span class="badge-soft">Web API</span><span class="badge-soft">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-emerald mb-3"><i class="bi bi-database"></i></div>
+                            <h3 class="h6 fw-bold mb-2">Data layer</h3>
+                            <p class="small text-muted-ink mb-3">SQL Server tuning &amp; stored procedures (~40% faster reads). MongoDB, MySQL, PostgreSQL and Redis for the right job.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">SQL Server</span><span class="badge-soft">MongoDB</span><span class="badge-soft">PostgreSQL</span><span class="badge-soft">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-amber mb-3"><i class="bi bi-rocket-takeoff"></i></div>
+                            <h3 class="h6 fw-bold mb-2">Delivery</h3>
+                            <p class="small text-muted-ink mb-3">Azure DevOps pipelines, Git workflows, Postman suites, ~35% shorter release cycles, 98% on-time sprint record.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">Azure DevOps</span><span class="badge-soft">Git</span><span class="badge-soft">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-rose mb-3"><i class="bi bi-robot"></i></div>
+                            <h3 class="h6 fw-bold mb-2">AI &amp; automation</h3>
+                            <p class="small text-muted-ink mb-3">Hosted assistants, MCQ generators, copilots integrated into review and reporting flows where they earn time.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">OpenAI APIs</span><span class="badge-soft">FastAPI</span><span class="badge-soft">Render</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="stack-card">
+                            <div class="icon-tile t-cyan mb-3"><i class="bi bi-shield-check"></i></div>
+                            <h3 class="h6 fw-bold mb-2">Domain depth</h3>
+                            <p class="small text-muted-ink mb-3">EdTech across 50+ campuses, payment gateways with 99.5% reconciliation, fleet ops, and assurance for audit workflows.</p>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge-soft">EdTech</span><span class="badge-soft">Audit</span><span class="badge-soft">Payments</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-3xl border border-orange-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-orange-600 text-white p-2.5 rounded-xl shadow-lg">
-                            <i class="fas fa-gamepad"></i>
+
+                <div class="text-center mt-5 reveal">
+                    <img alt="Toolbox" loading="lazy" class="img-fluid" style="max-width: 100%; opacity: 0.92;" src="https://skillicons.dev/icons?i=angular,cs,dotnet,typescript,javascript,nodejs,mongodb,mysql,postgres,redis,azure,vscode,visualstudio,git,github,tailwind,bootstrap,docker,linux,vercel&perline=11" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Timeline ─── -->
+        <section id="timeline" class="section-pad anchor-target" style="background: linear-gradient(180deg, transparent, rgba(247, 248, 251, 0.6), transparent);">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-bezier2"></i> Journey</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Education &amp; <span class="gradient-text">career timeline</span></h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">From NIT Tiruchirappalli to enterprise full-stack delivery — one continuous path through engineering, EdTech and assurance.</p>
+                </div>
+
+                <div class="tl-shell">
+                    <div class="tl-row">
+                        <span class="tl-dot dot-school"><i class="bi bi-mortarboard-fill"></i></span>
+                        <span class="tl-date">2019 — 2023 · Education</span>
+                        <div class="tl-card">
+                            <h3 class="h5 fw-bold mb-1">B.Tech · Chemical Engineering</h3>
+                            <p class="small mb-2" style="color: var(--da-accent);"><i class="bi bi-mortarboard me-1"></i>Minor: Computer Applications</p>
+                            <p class="small text-muted-ink mb-0"><i class="bi bi-pin-map-fill me-1"></i> National Institute of Technology Tiruchirappalli, India</p>
                         </div>
-                        <h3 class="font-bold text-xl text-orange-900">Games & Fun</h3>
                     </div>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://adhikary-dipankar.github.io/suduko/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
-                            <span class="text-orange-800 font-medium">Sudoku Master</span>
-                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/tic-tac-toe/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
-                            <span class="text-orange-800 font-medium">Tic Tac Toe</span>
-                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
-                        </a>
-                        <a href="https://adhikary-dipankar.github.io/clock/" target="_blank" class="flex items-center justify-between p-3 bg-white/60 hover:bg-white rounded-xl transition-all group border border-orange-100">
-                            <span class="text-orange-800 font-medium">Vertical Clock</span>
-                            <i class="fas fa-external-link-alt text-orange-400 group-hover:text-orange-600 text-sm"></i>
-                        </a>
+
+                    <div class="tl-row">
+                        <span class="tl-dot dot-job"><i class="bi bi-briefcase-fill"></i></span>
+                        <span class="tl-date">Jul 2023 — Present · Career</span>
+                        <div class="tl-card">
+                            <h3 class="h5 fw-bold mb-1">Associate (Tech Consultant) · PwC India</h3>
+                            <p class="small text-soft-ink mb-2"><i class="bi bi-geo-alt me-1"></i>Kolkata · Full-stack .NET &amp; Angular · Azure DevOps · SQL Server</p>
+                            <p class="small text-muted-ink mb-0">Multi-institution EdTech delivery — 50+ campuses, 6+ enterprise modules, payment gateway and CI/CD.</p>
+                            <div class="mt-3"><a href="#impact" class="btn btn-soft btn-sm rounded-pill"><i class="bi bi-graph-up-arrow me-1"></i>Impact narrative</a></div>
+                        </div>
+                    </div>
+
+                    <div class="tl-row">
+                        <span class="tl-dot dot-scope"><i class="bi bi-truck"></i></span>
+                        <span class="tl-date">Jan 2024 — Present · Production scope</span>
+                        <div class="tl-card">
+                            <h3 class="h5 fw-bold mb-1">Fleet &amp; transport operations</h3>
+                            <p class="small text-muted-ink mb-0">Routes, fleets, billing with Finance integration. Dashboards and analytics across campuses (~60% reduction in manual accounting).</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-row">
+                        <span class="tl-dot dot-now"><i class="bi bi-shield-check"></i></span>
+                        <span class="tl-date">Recent · Production scope</span>
+                        <div class="tl-card">
+                            <h3 class="h5 fw-bold mb-1">Assurance for Audit</h3>
+                            <p class="small text-muted-ink mb-0">Audit assurance workflows: structured evidence trails, role-aware approvals and export-ready reporting. Angular UX paired with .NET services aligned to governance expectations.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-row">
+                        <span class="tl-dot dot-cert"><i class="bi bi-award-fill"></i></span>
+                        <span class="tl-date">Certifications · ongoing</span>
+                        <div class="tl-card">
+                            <ul class="list-unstyled small text-muted-ink mb-0">
+                                <li class="mb-2"><i class="bi bi-patch-check-fill me-2" style="color: var(--da-amber);"></i>Generative AI for Marketing — MS 365 Copilot (Professional Certificate)</li>
+                                <li class="mb-2"><i class="bi bi-patch-check-fill me-2" style="color: var(--da-amber);"></i>Career Essentials in Generative AI — Microsoft &amp; LinkedIn</li>
+                                <li class="mb-2"><i class="bi bi-patch-check-fill me-2" style="color: var(--da-amber);"></i>SQL Server 2019 Essential Training</li>
+                                <li class="mb-2"><i class="bi bi-patch-check-fill me-2" style="color: var(--da-amber);"></i>Domain-Driven Design — Software Architecture</li>
+                                <li><i class="bi bi-patch-check-fill me-2" style="color: var(--da-amber);"></i>Career Essentials in GitHub</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="bg-gray-900 p-8 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center group">
-                    <h3 class="text-white font-bold text-xl mb-4">Want to see the code?</h3>
-                    <p class="text-gray-400 text-sm mb-6">All these projects are open-source and hosted on my GitHub.</p>
-                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="bg-white text-gray-900 px-6 py-3 rounded-2xl font-bold hover:bg-blue-500 hover:text-white transition-all flex items-center gap-2">
-                        <i class="fab fa-github"></i> Visit GitHub
+            </div>
+        </section>
+
+        <!-- ─── Impact ─── -->
+        <section id="impact" class="section-pad anchor-target">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-graph-up-arrow"></i> Impact</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Outcomes that <span class="gradient-text">moved the metric</span>.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">Anonymised highlights from PwC India delivery — full client narrative on request.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="card-da p-4 h-100 text-center">
+                            <div class="display-5 fw-bold gradient-text mb-2">~40%</div>
+                            <h3 class="h6 fw-bold mb-2">SQL throughput</h3>
+                            <p class="small text-muted-ink mb-0">Tuning, stored procedures and index strategy on hot reporting paths.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="card-da p-4 h-100 text-center">
+                            <div class="display-5 fw-bold gradient-text mb-2">~35%</div>
+                            <h3 class="h6 fw-bold mb-2">Faster releases</h3>
+                            <p class="small text-muted-ink mb-0">Azure DevOps pipelines: deterministic build, gated deploy, rollback-ready.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="card-da p-4 h-100 text-center">
+                            <div class="display-5 fw-bold gradient-text mb-2">98%</div>
+                            <h3 class="h6 fw-bold mb-2">On-time sprints</h3>
+                            <p class="small text-muted-ink mb-0">100+ sprint touchpoints across multi-team enterprise programmes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="card-da p-4 h-100 text-center">
+                            <div class="display-5 fw-bold gradient-text mb-2">10k+</div>
+                            <h3 class="h6 fw-bold mb-2">Tx / month gateway</h3>
+                            <p class="small text-muted-ink mb-0">Offline-tolerant payment gateway, ~99.5% reconciliation accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-da p-4 p-md-5 mt-5 reveal">
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-3">
+                            <div class="icon-tile t-indigo mb-3" style="width: 56px; height: 56px;"><i class="bi bi-building-fill-gear fs-4"></i></div>
+                            <img src="./pwci.png" alt="PwC Logo" class="h-25 object-contain mx-auto md:ml-auto md:mr-0 mb-4 opacity-80">
+                            <div class="font-mono-ui small" style="color: var(--da-accent);">Jul 2023 — Present</div>
+                            <h3 class="h5 fw-bold mt-2">PwC India</h3>
+                            <p class="small text-muted-ink mb-0">Associate · Tech Consultant · Kolkata</p>
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="h6 fw-bold text-uppercase font-mono-ui mb-2" style="color: var(--da-accent);">Enterprise EdTech platform</h4>
+                            <ul class="text-soft-ink" style="line-height: 1.8;">
+                                <li>6+ modules — Academics, Reports, Payments, Library, Configuration, Transport — across 50+ institutions on Angular 14+, .NET Core and SQL Server.</li>
+                                <li>Offline-tolerant payment gateway running ~10k transactions/month at ~99.5% reconciliation accuracy.</li>
+                                <li>20+ reusable Angular UI libraries; SQL tuning lifting hot-path read latency by ~40%.</li>
+                                <li>Azure DevOps CI/CD reduced release cycles by ~35% with 100+ on-time sprint touchpoints (98% on-time).</li>
+                            </ul>
+                            <h4 class="h6 fw-bold text-uppercase font-mono-ui mt-4 mb-2" style="color: var(--da-emerald);">Fleet &amp; transport operations</h4>
+                            <ul class="text-soft-ink" style="line-height: 1.8;">
+                                <li>Route, fleet and billing services integrated with Finance — ~60% reduction in manual accounting effort.</li>
+                                <li>Real-time dashboards and occupancy views deployed across 50+ campuses.</li>
+                            </ul>
+                            <h4 class="h6 fw-bold text-uppercase font-mono-ui mt-4 mb-2" style="color: var(--da-rose);">Assurance for Audit</h4>
+                            <ul class="text-soft-ink mb-0" style="line-height: 1.8;">
+                                <li>Workflows and digital artifacts for audit assurance — traceable evidence, role-aware reviews, versioning and approvals.</li>
+                                <li>Angular review surfaces over .NET services with export-ready reporting; aligned to governance expectations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Skills → Projects ─── -->
+        <section id="skills" class="section-pad anchor-target" style="background: linear-gradient(180deg, transparent, rgba(247, 248, 251, 0.6), transparent);">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-link-45deg"></i> Skills → Projects</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Tap a skill to <span class="gradient-text">jump to the work</span> that proves it.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">Every chip below is anchored to a project card. No brochureware claims — only links to evidence.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-indigo"><i class="bi bi-window-stack"></i></div>
+                                <h3 class="h6 fw-bold mb-0">Front-end</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#proj-platform"><i class="fab fa-angular"></i> Angular</a>
+                                <a class="chip" href="#proj-platform"><i class="bi bi-filetype-tsx"></i> TypeScript</a>
+                                <a class="chip" href="#proj-exam-prep"><i class="bi bi-book"></i> EdTech UI</a>
+                                <a class="chip" href="#proj-tailwind-stack"><i class="bi bi-wind"></i> Tailwind</a>
+                                <a class="chip" href="#proj-tailwind-stack"><i class="fab fa-bootstrap"></i> Bootstrap</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-violet"><i class="bi bi-hdd-stack"></i></div>
+                                <h3 class="h6 fw-bold mb-0">Back-end</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#proj-backend"><i class="fab fa-microsoft"></i> .NET Core</a>
+                                <a class="chip" href="#proj-backend"><i class="bi bi-hash"></i> C#</a>
+                                <a class="chip" href="#proj-backend"><i class="bi bi-plugin"></i> Web API</a>
+                                <a class="chip" href="#proj-mongo"><i class="fab fa-node-js"></i> Node.js</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-emerald"><i class="bi bi-database"></i></div>
+                                <h3 class="h6 fw-bold mb-0">Data</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#proj-platform"><i class="bi bi-server"></i> SQL Server</a>
+                                <a class="chip" href="#proj-mongo"><i class="fab fa-envira"></i> MongoDB</a>
+                                <a class="chip" href="#proj-platform"><i class="bi bi-graph-up-arrow"></i> Reporting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-rose"><i class="bi bi-robot"></i></div>
+                                <h3 class="h6 fw-bold mb-0">AI &amp; APIs</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#proj-ai"><i class="bi bi-stars"></i> Assistants</a>
+                                <a class="chip" href="#proj-ai"><i class="bi bi-lightning-fill"></i> FastAPI</a>
+                                <a class="chip" href="#proj-ai"><i class="bi bi-globe2"></i> OpenAI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-amber"><i class="bi bi-rocket-takeoff"></i></div>
+                                <h3 class="h6 fw-bold mb-0">DevOps</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#impact"><i class="bi bi-diagram-3"></i> Azure DevOps</a>
+                                <a class="chip" href="#demos"><i class="bi bi-github"></i> GitHub</a>
+                                <a class="chip" href="#impact"><i class="bi bi-speedometer"></i> CI/CD</a>
+                                <a class="chip" href="#demos"><i class="bi bi-box-arrow-up-right"></i> Deployments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="card-da p-4 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="icon-tile t-cyan"><i class="bi bi-shield-check"></i></div>
+                                <h3 class="h6 fw-bold mb-0">Domain</h3>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="chip" href="#proj-platform"><i class="bi bi-mortarboard"></i> EdTech</a>
+                                <a class="chip" href="#proj-fleet"><i class="bi bi-truck"></i> Fleet ops</a>
+                                <a class="chip" href="#proj-audit"><i class="bi bi-shield-check"></i> Audit</a>
+                                <a class="chip" href="#proj-platform"><i class="bi bi-credit-card-2-front"></i> Payments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill bars -->
+                <div class="card-da p-4 p-md-5 mt-5 reveal mx-auto" style="max-width: 740px;">
+                    <p class="text-center small font-mono-ui text-uppercase mb-4" style="color: var(--da-accent); letter-spacing: 0.1em;">Practice depth · self-assessed</p>
+                    <div class="skill-row">
+                        <div class="d-flex justify-content-between small mb-1"><span class="fw-semibold">Angular &amp; TypeScript</span><span class="text-muted-ink font-mono-ui">Strong · 92%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-skill-bar style="width: 92%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="d-flex justify-content-between small mb-1"><span class="fw-semibold">.NET Core &amp; Web API</span><span class="text-muted-ink font-mono-ui">Strong · 90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-skill-bar style="width: 90%; background: linear-gradient(90deg, var(--da-accent-2), var(--da-accent-3));"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="d-flex justify-content-between small mb-1"><span class="fw-semibold">SQL Server &amp; performance</span><span class="text-muted-ink font-mono-ui">Strong · 88%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-skill-bar style="width: 88%; background: linear-gradient(90deg, var(--da-emerald), var(--da-cyan));"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="d-flex justify-content-between small mb-1"><span class="fw-semibold">Azure DevOps &amp; CI/CD</span><span class="text-muted-ink font-mono-ui">Comfortable · 80%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-skill-bar style="width: 80%; background: linear-gradient(90deg, var(--da-amber), #fb923c);"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="d-flex justify-content-between small mb-1"><span class="fw-semibold">MongoDB &amp; Node.js</span><span class="text-muted-ink font-mono-ui">Comfortable · 75%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-skill-bar style="width: 75%; background: linear-gradient(90deg, var(--da-cyan), var(--da-accent));"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Projects ─── -->
+        <section id="projects" class="section-pad anchor-target">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-collection"></i> Selected work</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Projects that <span class="gradient-text">shipped to production</span>.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">Confidential client work is described by outcome. Public sites and OSS repos link directly.</p>
+                </div>
+
+                <h3 class="h6 font-mono-ui text-uppercase mb-4 reveal" style="color: var(--da-accent); letter-spacing: 0.1em;"><i class="bi bi-shield-fill-exclamation me-2"></i>Confidential · enterprise delivery</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-platform" class="project-card flag-confidential anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-amber"><i class="bi bi-building-fill-gear"></i></div>
+                                    <span class="pill pill-status-confidential"><i class="bi bi-shield-lock-fill"></i> Confidential</span>
+                                </div>
+                                <h3 class="project-title mb-2">Multi-campus EdTech platform</h3>
+                                <p class="project-blurb flex-grow-1">50+ institutions, 6+ live modules — academics, reports, payments, library, configuration, fleet. Angular 14+ SPAs, .NET Core APIs, SQL Server with 40% faster reads, Azure DevOps CI/CD, payment gateway 10k+ tx/month.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Angular</span><span class="badge-soft">.NET</span><span class="badge-soft">SQL Server</span><span class="badge-soft">Azure</span>
+                                </div>
+                                <a href="#impact" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="bi bi-graph-up-arrow me-1"></i>Read impact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-fleet" class="project-card flag-confidential anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-emerald"><i class="bi bi-truck-front-fill"></i></div>
+                                    <span class="pill pill-status-confidential"><i class="bi bi-shield-lock-fill"></i> Confidential</span>
+                                </div>
+                                <h3 class="project-title mb-2">Fleet &amp; transport operations</h3>
+                                <p class="project-blurb flex-grow-1">Routes, fleets, billing with Finance integration (~60% less manual accounting). Operational dashboards and utilisation views deployed across 50+ campuses on the same engineering stack.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Angular</span><span class="badge-soft">.NET</span><span class="badge-soft">SQL</span><span class="badge-soft">Dashboards</span>
+                                </div>
+                                <a href="#impact" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="bi bi-graph-up-arrow me-1"></i>Read impact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-audit" class="project-card flag-recent anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-rose"><i class="bi bi-shield-check"></i></div>
+                                    <span class="pill" style="background: rgba(16, 185, 129, 0.08); color: var(--da-emerald); border-color: rgba(16, 185, 129, 0.2);"><i class="bi bi-stars"></i> Recent</span>
+                                </div>
+                                <h3 class="project-title mb-2">Assurance for Audit</h3>
+                                <p class="project-blurb flex-grow-1">Digital workflows for audit assurance: structured evidence trails, role-aware approvals, version control, and export-ready reporting. Angular review surfaces backed by .NET services aligned to governance expectations.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Compliance UX</span><span class="badge-soft">Angular</span><span class="badge-soft">.NET</span><span class="badge-soft">Reporting</span>
+                                </div>
+                                <a href="#impact" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="bi bi-file-lock me-1"></i>Narrative on request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h6 font-mono-ui text-uppercase mb-4 reveal" style="color: var(--da-accent); letter-spacing: 0.1em;"><i class="bi bi-mortarboard-fill me-2"></i>Public · EdTech &amp; learning</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-exam-prep" class="project-card anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-indigo"><i class="bi bi-journal-bookmark-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Exam-prep resources hub</h3>
+                                <p class="project-blurb flex-grow-1">Structured learning paths and resource organisation — earlier Angular &amp; TypeScript build with topic indexes and progress hooks.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Angular</span><span class="badge-soft">TypeScript</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/rbi-grade-b-resources/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-violet"><i class="bi bi-palette-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Art Nexus</h3>
+                                <p class="project-blurb flex-grow-1">Creative-EdTech prototype exploring browse and discovery flows for a small studio audience.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">SPA</span><span class="badge-soft">Vercel</span>
+                                </div>
+                                <a href="https://nexus-p1obbue13-idiomscode-7207s-projects.vercel.app" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-cyan"><i class="bi bi-calculator"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">SIP calculator</h3>
+                                <p class="project-blurb flex-grow-1">Lightweight personal-finance utility — instant input updates, mobile-first layout.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">SPA</span><span class="badge-soft">Vanilla JS</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/sip-calc/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h6 font-mono-ui text-uppercase mb-4 reveal" style="color: var(--da-accent); letter-spacing: 0.1em;"><i class="bi bi-bag-fill me-2"></i>Public · commerce &amp; brand</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-tailwind-stack" class="project-card anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-pink"><i class="bi bi-shop"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">E-Commerce v1</h3>
+                                <p class="project-blurb flex-grow-1">Storefront pattern study — responsive product grid, hover states, theme tokens.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">HTML/CSS</span><span class="badge-soft">Pages</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-amber"><i class="bi bi-house-door-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Furniture shop</h3>
+                                <p class="project-blurb flex-grow-1">Catalog layout demo with Tailwind-aligned spacing on GitHub Pages.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Tailwind-aligned</span><span class="badge-soft">Pages</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/E-Shop-1/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-emerald"><i class="bi bi-flower2"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Fertilizer shop</h3>
+                                <p class="project-blurb flex-grow-1">Product listing prototype with modern CSS, deployed to Vercel.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">CSS</span><span class="badge-soft">Vercel</span>
+                                </div>
+                                <a href="https://v0-fertilizer-shop-g1g7f28bv-idiomscode-7207s-projects.vercel.app" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-rose"><i class="bi bi-leaf-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Mittika Herbal</h3>
+                                <p class="project-blurb flex-grow-1">Brand and product storytelling site for a herbal label — typography-led layout.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Static</span><span class="badge-soft">Brand</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/mittika-herbal/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-indigo"><i class="bi bi-person-bounding-box"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Main portfolio SPA</h3>
+                                <p class="project-blurb flex-grow-1">Earlier portfolio iteration on GitHub Pages with vertical scroll storytelling.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">SPA</span><span class="badge-soft">Pages</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-violet"><i class="bi bi-briefcase-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Business portfolio</h3>
+                                <p class="project-blurb flex-grow-1">Executive landing layout with hero metrics and stacked content blocks.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Bootstrap</span><span class="badge-soft">Static</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h6 font-mono-ui text-uppercase mb-4 reveal" style="color: var(--da-accent); letter-spacing: 0.1em;"><i class="bi bi-cpu-fill me-2"></i>AI · utilities · OSS</h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-ai" class="project-card flag-recent anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-rose"><i class="bi bi-robot"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live API</span>
+                                </div>
+                                <h3 class="project-title mb-2">AI assistance API</h3>
+                                <p class="project-blurb flex-grow-1">Hosted assistant-style API for downstream integrations. Render-deployed, JSON-first.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">FastAPI</span><span class="badge-soft">Render</span><span class="badge-soft">OpenAI</span>
+                                </div>
+                                <a href="https://aiassistantapi.onrender.com/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-cyan"><i class="bi bi-chat-dots-fill"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Zen chat</h3>
+                                <p class="project-blurb flex-grow-1">Minimal chat UI experiment focused on quiet typography and optimistic message states.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">SPA</span><span class="badge-soft">Pages</span>
+                                </div>
+                                <a href="https://adhikary-dipankar.github.io/zen-gchat/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start">Open <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-amber"><i class="bi bi-controller"></i></div>
+                                    <span class="pill pill-status-live"><i class="bi bi-broadcast-pin"></i> Live</span>
+                                </div>
+                                <h3 class="project-title mb-2">Sudoku &amp; analog clock</h3>
+                                <p class="project-blurb flex-grow-1">Two small logic / UI demos — backtracking solver and SVG analog clock.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="https://adhikary-dipankar.github.io/suduko/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill">Sudoku</a>
+                                    <a href="https://adhikary-dipankar.github.io/clock/" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill">Clock</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-backend" class="project-card flag-oss anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-slate"><i class="fab fa-github"></i></div>
+                                    <span class="pill pill-status-oss"><i class="bi bi-code-slash"></i> OSS</span>
+                                </div>
+                                <h3 class="project-title mb-2">library-config</h3>
+                                <p class="project-blurb flex-grow-1">.NET Web API layout patterns &amp; library configuration scaffolding.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">.NET</span><span class="badge-soft">C#</span><span class="badge-soft">Web API</span>
+                                </div>
+                                <a href="https://github.com/adhikary-dipankar/library-config" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="fab fa-github me-1"></i>Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card flag-oss">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-slate"><i class="fab fa-github"></i></div>
+                                    <span class="pill pill-status-oss"><i class="bi bi-code-slash"></i> OSS</span>
+                                </div>
+                                <h3 class="project-title mb-2">ai-mcq-generator</h3>
+                                <p class="project-blurb flex-grow-1">Assessment tooling for auto-generated multiple-choice questions.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">.NET</span><span class="badge-soft">AI</span>
+                                </div>
+                                <a href="https://github.com/adhikary-dipankar/ai-mcq-generator" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="fab fa-github me-1"></i>Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div id="proj-mongo" class="project-card flag-oss anchor-target">
+                            <div class="project-cover"></div>
+                            <div class="project-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-tile t-emerald"><i class="bi bi-diagram-2-fill"></i></div>
+                                    <span class="pill pill-status-oss"><i class="bi bi-code-slash"></i> OSS</span>
+                                </div>
+                                <h3 class="project-title mb-2">family-tree</h3>
+                                <p class="project-blurb flex-grow-1">Full-stack OSS sample using Angular front-end, Node.js backend and MongoDB persistence.</p>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge-soft">Angular</span><span class="badge-soft">Node.js</span><span class="badge-soft">MongoDB</span>
+                                </div>
+                                <a href="https://github.com/adhikary-dipankar/family-tree" target="_blank" rel="noopener" class="btn btn-soft btn-sm rounded-pill align-self-start"><i class="fab fa-github me-1"></i>Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Live deployments ─── -->
+        <section id="demos" class="section-pad anchor-target" style="background: linear-gradient(180deg, transparent, rgba(247, 248, 251, 0.6), transparent);">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-broadcast-pin"></i> Live</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Everything <span class="gradient-text">in production</span>, grouped.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                    <p class="text-soft-ink">Quick category browser — every URL is currently online.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card">
+                            <div class="d-flex align-items-center gap-2 mb-3"><div class="icon-tile t-indigo"><i class="bi bi-person-circle"></i></div><h3 class="h6 fw-bold mb-0">Portfolios</h3></div>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Main portfolio</a>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/Business-Portfolio-1/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Business portfolio</a>
+                            <a class="d-block small subtle-link" href="https://adhikary-dipankar.github.io/mittika-herbal/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Mittika Herbal</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card">
+                            <div class="d-flex align-items-center gap-2 mb-3"><div class="icon-tile t-pink"><i class="bi bi-bag-heart-fill"></i></div><h3 class="h6 fw-bold mb-0">Commerce</h3></div>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/E-Commerce-1/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>E-Commerce v1</a>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/E-Shop-1/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Furniture shop</a>
+                            <a class="d-block small subtle-link" href="https://v0-fertilizer-shop-g1g7f28bv-idiomscode-7207s-projects.vercel.app" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Fertilizer shop</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card">
+                            <div class="d-flex align-items-center gap-2 mb-3"><div class="icon-tile t-rose"><i class="bi bi-cpu-fill"></i></div><h3 class="h6 fw-bold mb-0">AI · utilities</h3></div>
+                            <a class="d-block small mb-2 subtle-link" href="https://aiassistantapi.onrender.com/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>AI assistance API</a>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/zen-gchat/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Zen chat</a>
+                            <a class="d-block small subtle-link" href="https://adhikary-dipankar.github.io/sip-calc/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>SIP calculator</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card">
+                            <div class="d-flex align-items-center gap-2 mb-3"><div class="icon-tile t-amber"><i class="bi bi-mortarboard-fill"></i></div><h3 class="h6 fw-bold mb-0">EdTech</h3></div>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/rbi-grade-b-resources/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Exam-prep resources</a>
+                            <a class="d-block small subtle-link" href="https://nexus-p1obbue13-idiomscode-7207s-projects.vercel.app" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Art Nexus</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card">
+                            <div class="d-flex align-items-center gap-2 mb-3"><div class="icon-tile t-emerald"><i class="bi bi-controller"></i></div><h3 class="h6 fw-bold mb-0">Games &amp; widgets</h3></div>
+                            <a class="d-block small mb-2 subtle-link" href="https://adhikary-dipankar.github.io/suduko/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Sudoku solver</a>
+                            <a class="d-block small subtle-link" href="https://adhikary-dipankar.github.io/clock/" target="_blank" rel="noopener"><i class="bi bi-arrow-up-right me-1"></i>Analog clock</i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="demo-card text-center d-flex flex-column justify-content-center h-100">
+                            <div class="icon-tile t-slate mx-auto mb-3" style="width: 56px; height: 56px;"><i class="fab fa-github fs-3"></i></div>
+                            <p class="small text-muted-ink mb-3">Browse, fork &amp; star the open-source repos</p>
+                            <a href="https://github.com/adhikary-dipankar" target="_blank" rel="noopener" class="btn btn-ink rounded-pill align-self-center px-4"><i class="fab fa-github me-2"></i>@adhikary-dipankar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Values strip ─── -->
+        <section class="section-pad">
+            <div class="container">
+                <div class="text-center reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+                    <span class="eyebrow"><i class="bi bi-compass"></i> How I work</span>
+                    <h2 class="display-6 fw-bold mt-3 mb-3">Three principles I default to <span class="gradient-text">every day</span>.</h2>
+                    <div class="section-divider mx-auto mb-4"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 reveal">
+                        <div class="value-card">
+                            <div class="icon-tile t-indigo mb-3"><i class="bi bi-1-circle-fill"></i></div>
+                            <h3 class="h5 fw-bold mb-2">Ship the smallest demoable slice</h3>
+                            <p class="small text-muted-ink mb-0">Every story should reach a stakeholder demo within the sprint. Big-bang releases bury risk; weekly demos surface it.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="value-card">
+                            <div class="icon-tile t-pink mb-3"><i class="bi bi-2-circle-fill"></i></div>
+                            <h3 class="h5 fw-bold mb-2">Write the migration first</h3>
+                            <p class="small text-muted-ink mb-0">Schema and data shape decisions outlive features. I draft migrations and rollback paths before the code that depends on them.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="value-card">
+                            <div class="icon-tile t-emerald mb-3"><i class="bi bi-3-circle-fill"></i></div>
+                            <h3 class="h5 fw-bold mb-2">Make trade-offs visible</h3>
+                            <p class="small text-muted-ink mb-0">Every PR notes what was deferred, what was assumed, and what would invalidate the choice. No silent debt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Contact ─── -->
+        <section id="contact" class="section-pad anchor-target">
+            <div class="container">
+                <div class="contact-shell reveal text-center">
+                    <span class="eyebrow"><i class="bi bi-send"></i> Let's talk</span>
+                    <h2 class="display-5 fw-bold mt-3 mb-3">Have an enterprise build, an audit workflow, or an EdTech idea? <br class="d-none d-md-inline" /><span class="gradient-text">Let's scope it together.</span></h2>
+                    <p class="text-soft-ink fs-5 mx-auto mb-4" style="max-width: 620px;">I respond to email within a working day. Async-first, available across IST + EU mornings.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+                        <a href="mailto:d.adhikary.ai@gmail.com" class="btn btn-gradient rounded-pill px-4 py-2"><i class="bi bi-envelope-fill me-2"></i>d.adhikary.ai@gmail.com</a>
+                        <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" rel="noopener" class="btn btn-ink rounded-pill px-4 py-2"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+                        <a href="DIPANKAR ADHIKARY.pdf" download class="btn btn-soft rounded-pill px-4 py-2"><i class="bi bi-arrow-down-circle me-2"></i>Download CV</a>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card-soft p-3"><div class="font-mono-ui small text-muted-ink mb-1"><i class="bi bi-geo-alt me-1"></i>Based in</div><div class="fw-semibold">Kolkata · India</div></div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card-soft p-3"><div class="font-mono-ui small text-muted-ink mb-1"><i class="bi bi-clock me-1"></i>Timezone</div><div class="fw-semibold">IST (UTC + 5:30)</div></div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card-soft p-3"><div class="font-mono-ui small text-muted-ink mb-1"><i class="bi bi-translate me-1"></i>Languages</div><div class="fw-semibold">English · Hindi · Bengali</div></div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card-soft p-3"><div class="font-mono-ui small text-muted-ink mb-1"><i class="bi bi-calendar-check me-1"></i>Availability</div><div class="fw-semibold">Open to roles</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-md-5">
+                    <a class="d-inline-flex align-items-center gap-2 fw-bold mb-3 text-decoration-none text-white" href="#home">
+                        <span class="brand-mark">DA</span>
+                        <span>Dipankar Adhikary</span>
                     </a>
-                </div>
-    
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10"></div>
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Developer Goals</h3>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Build scalable AI-powered EdTech platforms.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Contribute to impactful open-source projects.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Architect reusable enterprise solutions.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Complete Azure DevOps certification.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Build an AI-powered medicine identifier.</span>
-                            </li>
-                        </ul>
+                    <p class="small mb-3" style="color: #94a3b8; max-width: 360px;">Full-stack developer at PwC India — Angular, .NET Core, SQL Server, Azure DevOps. Building enterprise EdTech, fleet ops, and audit assurance tooling.</p>
+                    <div class="d-flex gap-2">
+                        <a class="footer-icon" href="mailto:d.adhikary.ai@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                        <a class="footer-icon" href="https://linkedin.com/in/dipankar-adhikary" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="footer-icon" href="https://github.com/adhikary-dipankar" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
-                
-                <div class="md:w-1/2">
-                    <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
-                            <div class="bg-blue-100 p-3 rounded-xl text-blue-600">
-                                <i class="fas fa-pencil-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Problem Solver</h4>
-                                <p class="text-gray-500 text-sm mt-1">I use a pencil to solve real-world problems before writing a single line of code.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
-                            <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600">
-                                <i class="fas fa-bolt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">The Developer Mantra</h4>
-                                <p class="text-gray-500 text-sm mt-1">Build like Iron Man, debug like Sherlock, and deploy like Flash.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
-                            <div class="bg-purple-100 p-3 rounded-xl text-purple-600">
-                                <i class="fas fa-mug-hot text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">My Fuel</h4>
-                                <p class="text-gray-500 text-sm mt-1">Powered exclusively by Coffee, Music, and Deep Focus.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-6 col-md-2">
+                    <h4 class="text-white h6 fw-bold mb-3">Explore</h4>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#stack">Stack</a></li>
+                        <li><a href="#timeline">Journey</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Professional <span class="gradient-text">Experience</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/3 text-center md:text-right md:border-r-2 border-gray-200 md:pr-8">
-                    <img src="./pwci.png" alt="PwC Logo" class="h-25 object-contain mx-auto md:ml-auto md:mr-0 mb-4 opacity-80">
-                    <h3 class="text-xl font-bold text-gray-800">PwC India</h3>
-                    <p class="text-blue-600 font-semibold mt-1">Kolkata, India</p>
-                    <p class="text-gray-500 text-sm mt-1">Jul 2023 - Present</p>
+                <div class="col-6 col-md-2">
+                    <h4 class="text-white h6 fw-bold mb-3">Work</h4>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#demos">Live</a></li>
+                        <li><a href="#cv">Résumé</a></li>
+                    </ul>
                 </div>
-                <div class="md:w-2/3">
-                    <h4 class="text-2xl font-bold mb-2 text-gray-800">Tech Consultant</h4>
-                    <p class="text-gray-500 font-medium mb-4 uppercase text-xs tracking-wider">Full Stack Development (.NET & Angular)</p>
-                    <ul class="list-none space-y-3 text-gray-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Spearheading full-stack enterprise solutions utilizing .NET Core, MVC, Web API, and Angular.</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Architecting reusable systems with microservices and integrating SQL Server & MongoDB.</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-angle-right text-blue-500 mt-1"></i> <span>Managing end-to-end deployments leveraging Azure DevOps infrastructure.</span></li>
+                <div class="col-md-3">
+                    <h4 class="text-white h6 fw-bold mb-3">Contact</h4>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><i class="bi bi-envelope me-2"></i>d.adhikary.ai@gmail.com</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Kolkata, India</li>
+                        <li><i class="bi bi-clock me-2"></i>IST · UTC +5:30</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Featured <span class="gradient-text">GitHub Projects</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
-                    <div class="p-8 project-content flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-red-50 text-red-600 p-3 rounded-xl"><i class="fas fa-robot text-xl"></i></div>
-                            <a href="https://github.com/adhikary-dipankar/ai-mcq-generator" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">AI MCQ Test</h3>
-                        <p class="text-gray-500 mb-6 flex-grow">AI-powered mock test generator with OpenAI integration and intuitive UI for real exam simulation.</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
-                            <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-md font-medium border border-purple-100">.NET Core</span>
-                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">MongoDB</span>
-                        </div>
-                        <a href="https://github.com/adhikary-dipankar/ai-mcq-generator" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
-                    <div class="p-8 project-content flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-blue-50 text-blue-600 p-3 rounded-xl"><i class="fas fa-book-open text-xl"></i></div>
-                            <a href="https://github.com/adhikary-dipankar/library-config" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Library MnG</h3>
-                        <p class="text-gray-500 mb-6 flex-grow">Rule-based system for managing campus-specific library book issues, renewals, fines, and item retention.</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
-                            <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-md font-medium border border-blue-100">.NET Framework</span>
-                        </div>
-                        <a href="https://github.com/adhikary-dipankar/library-config" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
-                    <div class="p-8 project-content flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-green-50 text-green-600 p-3 rounded-xl"><i class="fas fa-sitemap text-xl"></i></div>
-                            <a href="https://github.com/adhikary-dipankar/family-tree" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Family Tree</h3>
-                        <p class="text-gray-500 mb-6 flex-grow">Dynamic tree-structured visualization tool with editable family relations and life event timelines.</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
-                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">Node.js</span>
-                            <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-md font-medium border border-green-100">MongoDB</span>
-                        </div>
-                        <a href="https://github.com/adhikary-dipankar/family-tree" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover">
-                    <div class="p-8 project-content flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-purple-50 text-purple-600 p-3 rounded-xl"><i class="fas fa-qrcode text-xl"></i></div>
-                            <a href="https://github.com/adhikary-dipankar/qr-code-styler" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-github text-2xl"></i></a>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">QR GenAI</h3>
-                        <p class="text-gray-500 mb-6 flex-grow">Stylish QR generator with color customization, border effects, and downloadable formats (PNG/SVG).</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-red-50 text-red-700 text-xs px-3 py-1 rounded-md font-medium border border-red-100">Angular</span>
-                            <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-md font-medium border border-purple-100">Bootstrap</span>
-                        </div>
-                        <a href="https://github.com/adhikary-dipankar/qr-code-styler" target="_blank" class="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="https://github.com/adhikary-dipankar" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition shadow-lg hover:shadow-xl">
-                    <i class="fab fa-github text-xl"></i> Explore All GitHub Repositories
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Technical <span class="gradient-text">Arsenal</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-code text-blue-500"></i> Languages & Frameworks</h3>
-                    <div class="space-y-5 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">.NET Core / C#</span><span>90%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">Angular / TypeScript</span><span>90%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-500 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">JavaScript</span><span>85%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">MVC & Web API</span><span>85%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fas fa-database text-green-500"></i> Databases & Infrastructure</h3>
-                    <div class="space-y-5 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">SQL Server</span><span>85%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 85%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">MongoDB</span><span>80%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full skill-bar" style="width: 80%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">Azure DevOps / Microservices</span><span>75%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-blue-400 h-2 rounded-full skill-bar" style="width: 75%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span class="font-medium">Git / GitHub / Postman</span><span>90%</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-gray-800 h-2 rounded-full skill-bar" style="width: 90%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <h3 class="text-gray-500 uppercase tracking-widest text-sm font-bold mb-6">Tools & Platforms</h3>
-                <img src="https://skillicons.dev/icons?i=vscode,visualstudio,sqlite,git,postman,github,figma,linux,postgres,firebase,redis" class="mx-auto" alt="Tools Grid">
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
-                    Interested in working together or want to discuss enterprise architecture? Feel free to reach out.
-                </p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto">
-                
-                <div class="w-full grid sm:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
-                        <div class="bg-blue-100 p-4 rounded-full text-blue-600 mb-4"><i class="fas fa-map-marker-alt text-2xl"></i></div>
-                        <h4 class="font-bold text-lg text-gray-800">Location</h4>
-                        <p class="text-gray-500 mt-1">Kolkata, West Bengal, India</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
-                        <div class="bg-red-100 p-4 rounded-full text-red-600 mb-4"><i class="fas fa-envelope text-2xl"></i></div>
-                        <h4 class="font-bold text-lg text-gray-800">Primary Email</h4>
-                        <a href="mailto:d.adhikary.ai@gmail.com" class="text-blue-600 hover:underline mt-1 font-medium">d.adhikary.ai@gmail.com</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
-                        <div class="bg-indigo-100 p-4 rounded-full text-indigo-600 mb-4"><i class="fab fa-linkedin-in text-2xl"></i></div>
-                        <h4 class="font-bold text-lg text-gray-800">LinkedIn</h4>
-                        <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="text-blue-600 hover:underline mt-1 font-medium">Connect Online</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
-                        <div class="bg-gray-100 p-4 rounded-full text-gray-800 mb-4"><i class="fab fa-github text-2xl"></i></div>
-                        <h4 class="font-bold text-lg text-gray-800">GitHub Universe</h4>
-                        <a href="https://github.com/adhikary-dipankar" target="_blank" class="text-blue-600 hover:underline mt-1 font-medium">@adhikary-dipankar</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="flex justify-center mt-12">
-                <div class="heart-container" title="Show some love!">
-                    <input type="checkbox" class="checkbox" id="like-btn">
-                    <div class="svg-container">
-                        <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg"><path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"></path></svg>
-                        <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg"><path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z"></path></svg>
-                        <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg"><polygon points="10,10 20,20"></polygon><polygon points="10,50 20,50"></polygon><polygon points="20,80 30,70"></polygon><polygon points="90,10 80,20"></polygon><polygon points="90,50 80,50"></polygon><polygon points="80,80 70,70"></polygon></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0 text-center md:text-left">
-                    <h3 class="text-2xl font-bold text-white">DA<span class="text-blue-500">.</span></h3>
-                    <p class="text-gray-400 mt-2 text-sm">Full Stack Developer | .NET & Angular</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://linkedin.com/in/dipankar-adhikary" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/adhikary-dipankar" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gray-600 hover:text-white transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:d.adhikary.ai@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-500 hover:text-white transition">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-500 text-sm tracking-wider uppercase">Code is not just syntax -- it's how you think. Build with vision.</p>
+            <hr style="border-color: rgba(255, 255, 255, 0.08); margin: 2rem 0 1rem;" />
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 small" style="color: #94a3b8;">
+                <span>© <span id="footYear"></span> Dipankar Adhikary · Crafted with Bootstrap, Anime.js &amp; care.</span>
+                <span class="font-mono-ui">v3 · light edition</span>
             </div>
         </div>
     </footer>
 
+    <button class="fab-top" id="fabTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+
     <script>
-        // Enhanced Mobile Menu Toggle (Smooth floating card)
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+        // Footer year
+        document.getElementById('footYear').textContent = new Date().getFullYear();
 
-        menuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (mobileMenu.classList.contains('mobile-menu-enter')) {
-                // Open
-                mobileMenu.classList.remove('mobile-menu-enter');
-                mobileMenu.classList.add('mobile-menu-active');
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-            } else {
-                // Close
-                mobileMenu.classList.remove('mobile-menu-active');
-                mobileMenu.classList.add('mobile-menu-enter');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            }
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
-                if (mobileMenu.classList.contains('mobile-menu-active')) {
-                    mobileMenu.classList.remove('mobile-menu-active');
-                    mobileMenu.classList.add('mobile-menu-enter');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                }
-            }
-        });
-        
-        // Animate skill bars when scrolled into view
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-bar');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-        }
-        
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.bottom >= 0
-            );
-        }
-        
-        let skillsAnimated = false;
-        window.addEventListener('scroll', function() {
-            const skillsSection = document.getElementById('skills');
-            if (skillsSection && isInViewport(skillsSection) && !skillsAnimated) {
-                animateSkillBars();
-                skillsAnimated = true;
-            }
-        });
-        
-        // Smooth scrolling for anchor links and auto-close mobile menu
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Smooth scroll + collapse navbar on click
+        const navbarCollapseEl = document.getElementById('navMain');
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                const tid = this.getAttribute('href');
+                if (!tid || tid === '#' || tid.length < 2) return;
+                const el = document.querySelector(tid);
+                if (!el) return;
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Account for fixed navbar
-                        behavior: 'smooth'
-                    });
-                    
-                    // Auto Close mobile menu
-                    if (mobileMenu.classList.contains('mobile-menu-active')) {
-                        mobileMenu.classList.remove('mobile-menu-active');
-                        mobileMenu.classList.add('mobile-menu-enter');
-                        menuIcon.classList.remove('fa-times');
-                        menuIcon.classList.add('fa-bars');
-                    }
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (navbarCollapseEl && navbarCollapseEl.classList.contains('show')) {
+                    const c = bootstrap.Collapse.getInstance(navbarCollapseEl);
+                    if (c) c.hide();
                 }
             });
+        });
+
+        // Reveal on scroll
+        const revealObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '-40px', threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(function (el) { revealObs.observe(el); });
+
+        // Hero anime stagger
+        anime({
+            targets: '#home .reveal',
+            translateY: [22, 0],
+            opacity: [0, 1],
+            easing: 'easeOutQuad',
+            duration: 700,
+            delay: anime.stagger(80, { start: 80 })
+        });
+
+        // Timeline anime
+        const tlSection = document.getElementById('timeline');
+        if (tlSection) {
+            new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (e) {
+                    if (!e.isIntersecting) return;
+                    anime({
+                        targets: '#timeline .tl-row',
+                        opacity: [0, 1],
+                        translateX: [-18, 0],
+                        easing: 'easeOutCubic',
+                        duration: 700,
+                        delay: anime.stagger(120)
+                    });
+                    obs.unobserve(e.target);
+                });
+            }, { threshold: 0.12 }).observe(tlSection);
+        }
+
+        // Skill bar fill on view
+        let skillsRun = false;
+        const skSec = document.getElementById('skills');
+        if (skSec) {
+            const skObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (!e.isIntersecting || skillsRun) return;
+                    skillsRun = true;
+                    document.querySelectorAll('[data-skill-bar]').forEach(function (bar) {
+                        const w = bar.style.width;
+                        bar.style.width = '0';
+                        requestAnimationFrame(function () {
+                            setTimeout(function () { bar.style.width = w; }, 80);
+                        });
+                    });
+                });
+            }, { threshold: 0.2 });
+            skObs.observe(skSec);
+        }
+
+        // Scroll progress + active nav + FAB
+        const progressEl = document.getElementById('scrollProgress');
+        const fab = document.getElementById('fabTop');
+        const sections = Array.from(document.querySelectorAll('main section[id]'));
+        const navLinks = Array.from(document.querySelectorAll('.navbar-da .nav-link'));
+
+        function onScroll() {
+            const h = document.documentElement;
+            const max = h.scrollHeight - h.clientHeight;
+            const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+            progressEl.style.width = pct + '%';
+            fab.classList.toggle('show', h.scrollTop > 600);
+
+            // Active section
+            const top = h.scrollTop + 140;
+            let cur = sections[0];
+            for (const s of sections) {
+                if (s.offsetTop <= top) cur = s;
+            }
+            navLinks.forEach(function (l) {
+                const href = l.getAttribute('href');
+                l.classList.toggle('active', href === '#' + (cur && cur.id));
+            });
+        }
+        document.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        fab.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
