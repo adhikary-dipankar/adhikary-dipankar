@@ -14,7 +14,11 @@
 
 ### Try
 <h3 align="center">
-    <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
+  <a href="https://adhikary-dipankar.github.io/adhikary-dipankar/" target="_blank">
+    <img src="https://img.shields.io/badge/View--Portfolio-615FFF?style=for-the-badge&logoColor=black" />
+  </a>
+  
+  <a href="https://adhikary-dipankar.github.io/portfolio-2/" target="_blank">
     <img src="https://img.shields.io/badge/View--Portfolio-615FFF?style=for-the-badge&logoColor=black" />
   </a>
 
